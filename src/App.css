@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .searchBar__div input {
+    width: 320px;
+  }
+  .searchBar__div input::placeholder {
+    font-size: 12px;
+  }
+  .img-hero {
+    width: 350px;
+  }
+}
