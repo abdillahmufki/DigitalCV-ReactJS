@@ -10,14 +10,21 @@
 }
 
 .button {
-  background-color: #0d3b72;
+  background: #031898;
+  background: -moz-linear-gradient(left, #031898 0%, #0481d4 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #031898),
+    color-stop(100%, #0481d4)
+  );
+  background: -webkit-linear-gradient(left, #031898 0%, #0481d4 100%);
+  background: -o-linear-gradient(left, #031898 0%, #0481d4 100%);
+  background: -ms-linear-gradient(left, #031898 0%, #0481d4 100%);
+  background: linear-gradient(to right, #031898 0%, #0481d4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031898', endColorstr='#0481d4', GradientType=1 );
+  border-radius: 20px;
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  font-weight: 500;
 }

@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/images/logo/logoDcv2.png";
-// import Button from "./Button";
+import Button from "./Button";
 import { Link } from "react-router-dom";
-import ButtonOutline from "./ButtonOutline";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,13 +26,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navbar fixed w-full top-0 ${className} px-10`}>
+    <nav className={`navbar fixed w-full top-0 ${className} px-10 py-2`}>
       <div className="navbar-start">
-        <div className="dropdown absolute top-5 left-5">
+        <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -48,43 +47,56 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gray-100 rounded-box w-52 mr-64"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <Link to="/">
-                <a className="font-bold">Pencari Kerja</a>
-              </Link>
+              <a>Item 1</a>
+            </li>
+            <li tabIndex={0}>
+              <a className="justify-between">
+                Parent
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </svg>
+              </a>
+              <ul className="p-2">
+                <li>
+                  <a>Submenu 1</a>
+                </li>
+                <li>
+                  <a>Submenu 2</a>
+                </li>
+              </ul>
             </li>
             <li>
-              <Link to="/company">
-                <a>Perusahaan</a>
-              </Link>
+              <a>Item 3</a>
             </li>
           </ul>
         </div>
-        <div className="px-3">
-          <img src={logo} width={70} alt="logo" />
-        </div>
+        <Link to="/">
+          <img src={logo} width={65} alt="logo" className="flex items-center" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/">
-              <a>Pencari Kerja</a>
-            </Link>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <Link to="/company">
-              <a>Perusahaan</a>
-            </Link>
+            <Link to="aboutus">About Us</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <div className="hidden sm:block">
-          <ButtonOutline text="Daftar" />
-          {/* <Button text="Masuk" /> */}
-        </div>
+        <Link to="/contact">
+          <Button text="Contact" />
+        </Link>
       </div>
     </nav>
   );
