@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import AboutUs from "./pages/AboutUs";
+import WhatsappButton from "./components/WhatsappButton";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/aboutus" element={<AboutUs />} />
           </Routes>
-          {/* <Company /> */}
+          <WhatsappButton />
         </main>
         <Footer />
       </Router>
