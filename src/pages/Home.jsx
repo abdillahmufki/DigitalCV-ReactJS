@@ -2,9 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import "../App.css";
 import bgHero from "../assets/images/content/bg1.png";
-// import SearchBar from "../components/SearchBar";
-// import ButtonPencarian from "../components/ButtonPencarian";
-import imgContent from "../assets/images/content/komponen1.png";
 import TabComponent from "../components/TabComponent";
 import Hero from "../components/Hero";
 import Card from "../components/Card";
@@ -13,7 +10,7 @@ const Kandidat = () => {
   return (
     <>
       <div
-        className="container-2xl hero min-h-screen bg-fixed mb-5"
+        className="container-2xl hero-home hero min-h-screen bg-fixed mb-5"
         // style={{
         //   backgroundImage: `url("${bgHero}")`,
         // }}
@@ -22,11 +19,24 @@ const Kandidat = () => {
           <Hero />
         </div>
       </div>
-      <div className="flex justify-center min-w-screen min-h-fit px-10">
-        <div>
-          <TabComponent />
-        </div>
+      <section>
+        <Container fluid className="bg-blue-800 h-64">
+          <div className="pt-24">
+            <marquee>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/600px-Instagram_logo_2022.svg.png"
+                width={60}
+                alt=""
+              />
+            </marquee>
+          </div>
+        </Container>
+      </section>
+
+      <div>
+        <TabComponent />
       </div>
+
       <Container fluid className="my-10">
         <Row className="px-10">
           <Col lg={4} md={6} sm={12}>

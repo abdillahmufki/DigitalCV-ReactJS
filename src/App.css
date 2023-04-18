@@ -27,4 +27,12 @@ body {
   .img-hero {
     width: 350px;
   }
+
+  .hero-home {
+    margin-top: 20px;
+  }
+
+  .container_hero {
+    margin-top: 80px;
+  }
 }

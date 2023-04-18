@@ -19,14 +19,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  let className = "bg-transparent py-2";
+  let className = "bg-[#fff] py-2 z-50";
   if (isScrolled) {
     className =
       "bg-white z-50 drop-shadow-md py-2 transition ease-in-out delay-100 duration-300";
   }
 
   return (
-    <nav className={`navbar fixed w-full top-0 ${className} px-10 py-2`}>
+    <nav className={`navbar fixed w-full top-0 ${className} px-10 py-2 pt-3`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-blue-800 text-white rounded-box w-52"
           >
             <li>
               <a>Item 1</a>
@@ -65,7 +65,7 @@ const Navbar = () => {
                   <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                 </svg>
               </a>
-              <ul className="p-2">
+              <ul className="p-2 bg-blue-800">
                 <li>
                   <a>Submenu 1</a>
                 </li>
