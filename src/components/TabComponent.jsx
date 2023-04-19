@@ -1,18 +1,100 @@
 import React, { useState } from "react";
-import Card from "./Card";
 import Responsive from "react-responsive";
 import { Container, Row, Col } from "react-grid-system";
+import AllFeature from "../Features/AllFeature";
+import DigitalCv from "../Features/DigitalCv";
+import Pinmyloc from "../Features/Pinmyloc";
+import CountList from "../Features/CountList";
+import Gds from "../Features/Gds";
+import CalcSales from "../Features/CalcSales";
+import CalcStaff from "../Features/CalcStaff";
+import CalcNote from "../Features/CalcNote";
 
 const TabComponents = () => {
-  const [activeTab, setActiveTab] = useState(2); // Set default active tab to 2
+  const [activeTab, setActiveTab] = useState(1); // Set default active tab to 2
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
+  const tabs = [
+    {
+      index: 1,
+      label: "Semua",
+    },
+    {
+      index: 2,
+      label: "DigitalCV",
+    },
+    {
+      index: 3,
+      label: "Pinmyloc",
+    },
+    {
+      index: 4,
+      label: "Countlist",
+    },
+    {
+      index: 5,
+      label: "GDS",
+    },
+    {
+      index: 6,
+      label: "CalcSales",
+    },
+    {
+      index: 7,
+      label: "CalcStaff",
+    },
+    {
+      index: 8,
+      label: "CalcNote",
+    },
+  ];
+
+  const tabsContent = [
+    {
+      index: 1,
+      component: <AllFeature />,
+    },
+    {
+      index: 2,
+      component: <DigitalCv />,
+    },
+    {
+      index: 3,
+      component: <Pinmyloc />,
+    },
+    {
+      index: 4,
+      component: <CountList />,
+    },
+    {
+      index: 5,
+      component: <Gds />,
+    },
+    {
+      index: 6,
+      component: <CalcSales />,
+    },
+    {
+      index: 7,
+      component: <CalcStaff />,
+    },
+    {
+      index: 8,
+      component: <CalcNote />,
+    },
+  ];
+
   return (
     <>
       <div className="p-5">
+        <div className="my-10">
+          <h1 className="text-4xl font-semibold text-center">
+            Jawaban untuk segala kebutuhan bisnis Anda
+          </h1>
+        </div>
         <div className="tabs min-w-full flex justify-center ease-out duration-300">
           <Responsive maxWidth={768}>
             {/* Render dropdown menu on screens with max width of 768px (mobile) */}
@@ -22,196 +104,39 @@ const TabComponents = () => {
               onChange={(e) => handleTabClick(parseInt(e.target.value))}
             >
               <option value={1}>Semua</option>
-              <option value={2}>Payroll</option>
-              <option value={3}>Gestalt Calc</option>
-              <option value={4}>Gestalt Accounting</option>
-              <option value={5}>Gestalt Training Center</option>
+              <option value={2}>DigitalCV</option>
+              <option value={3}>Pinmyloc</option>
+              <option value={4}>Countlist</option>
+              <option value={5}>GDS</option>
+              <option value={6}>CalcSales</option>
+              <option value={7}>CalcStaff</option>
+              <option value={8}>CalcNote</option>
             </select>
           </Responsive>
           <Responsive minWidth={768}>
             {/* Render tabs on screens with min width of 768px (desktop) */}
-            <a
-              className={`tab tab-lg tab-lifted ${
-                activeTab === 1 ? "tab-active" : ""
-              }`}
-              onClick={() => handleTabClick(1)}
-            >
-              Semua
-            </a>
-            <a
-              className={`tab tab-lg tab-lifted ${
-                activeTab === 2 ? "tab-active" : ""
-              }`}
-              onClick={() => handleTabClick(2)}
-            >
-              Payroll
-            </a>
-            <a
-              className={`tab tab-lg tab-lifted ${
-                activeTab === 3 ? "tab-active" : ""
-              }`}
-              onClick={() => handleTabClick(3)}
-            >
-              Gestalt Calc
-            </a>
-            <a
-              className={`tab tab-lg tab-lifted ${
-                activeTab === 4 ? "tab-active" : ""
-              }`}
-              onClick={() => handleTabClick(4)}
-            >
-              Gestalt Accounting
-            </a>
-            <a
-              className={`tab tab-lg tab-lifted ${
-                activeTab === 5 ? "tab-active" : ""
-              }`}
-              onClick={() => handleTabClick(5)}
-            >
-              Gestalt Training Center
-            </a>
+            <Container>
+              {tabs.map(({ index, label }) => (
+                <a
+                  key={index}
+                  className={`tab tab-lg tab-lifted ${
+                    activeTab === index ? "tab-active" : ""
+                  }`}
+                  onClick={() => handleTabClick(index)}
+                >
+                  {label}
+                </a>
+              ))}
+            </Container>
           </Responsive>
         </div>
-        <br />
-        <div className="flex justify-center px-5">
-          {activeTab === 1 && (
-            <div>
-              <h2>Tab 1 Content</h2>
-              <p>
-                Where does it come from? Contrary to popular belief, Lorem Ipsum
-                is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old.
-                Richard McClintock,{" "}
-                <strong className="text-red-500">
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more
-                </strong>{" "}
-                obscure Latin words, consectetur, from a Lorem Ipsum passage,
-                and going through the cites of the word in classical literature,
-                discovered the undoubtable source. Lorem Ipsum comes from
-                sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
-                (The Extremes of Good and Evil) by Cicero, written in 45 BC.
-                This book is a treatise on the theory of ethics, very popular
-                during the Renaissance. The first line of Lorem Ipsum, "Lorem
-                ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
-              </p>
-            </div>
-          )}
-          {activeTab === 2 && (
-            <div className="flex justify-between">
-              <Container fluid>
-                <Row>
-                  <Col lg={4}>
-                    <Card
-                      img="https://images.unsplash.com/photo-1677169568237-b56a915d9074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                      alt="langit"
-                      title="Langit"
-                      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed"
-                      btnText="Baca Selengkapnya"
-                    />
-                  </Col>
-                  <Col lg={4}>
-                    <Card
-                      img="https://images.unsplash.com/photo-1677169568237-b56a915d9074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                      alt="langit"
-                      title="Langit"
-                      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed"
-                      btnText="Baca Selengkapnya"
-                    />
-                  </Col>
-                  <Col lg={4}>
-                    <Card
-                      img="https://images.unsplash.com/photo-1677169568237-b56a915d9074?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                      alt="langit"
-                      title="Langit"
-                      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed"
-                      btnText="Baca Selengkapnya"
-                    />
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-          )}
-          {activeTab === 3 && (
-            <div>
-              <h2>Tab 3 Content</h2>
-              <p>
-                Where does it come from? Contrary to popular belief, Lorem Ipsum
-                is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old.
-                Richard McClintock, a Latin professor at Hampden-Sydney College
-                in Virginia, looked up one of the more obscure Latin words,
-                consectetur, from a Lorem Ipsum passage, and going through the
-                cites of the word in classical literature, discovered the
-                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
-                and Evil) by Cicero, written in 45 BC. This book is a treatise
-                on the theory of ethics, very popular during the Renaissance.
-                The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                comes from a line in section 1.10.32. The standard chunk of
-                Lorem Ipsum used since the 1500s is reproduced below for those
-                interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914
-                translation by H. Rackham.
-              </p>
-            </div>
-          )}
-          {activeTab === 4 && (
-            <div>
-              <h2>Tab 4 Content</h2>
-              <p>
-                Where does it come from? Contrary to popular belief, Lorem Ipsum
-                is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old.
-                Richard McClintock, a Latin professor at Hampden-Sydney College
-                in Virginia, looked up one of the more obscure Latin words,
-                consectetur, from a Lorem Ipsum passage, and going through the
-                cites of the word in classical literature, discovered the
-                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
-                and Evil) by Cicero, written in 45 BC. This book is a treatise
-                on the theory of ethics, very popular during the Renaissance.
-                The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                comes from a line in section 1.10.32. The standard chunk of
-                Lorem Ipsum used since the 1500s is reproduced below for those
-                interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914
-                translation by H. Rackham.
-              </p>
-            </div>
-          )}
-          {activeTab === 5 && (
-            <div>
-              <h2>Tab 5 Content</h2>
-              <p>
-                Where does it come from? Contrary to popular belief, Lorem Ipsum
-                is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 BC, making it over 2000 years old.
-                Richard McClintock, a Latin professor at Hampden-Sydney College
-                in Virginia, looked up one of the more obscure Latin words,
-                consectetur, from a Lorem Ipsum passage, and going through the
-                cites of the word in classical literature, discovered the
-                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
-                and Evil) by Cicero, written in 45 BC. This book is a treatise
-                on the theory of ethics, very popular during the Renaissance.
-                The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-                comes from a line in section 1.10.32. The standard chunk of
-                Lorem Ipsum used since the 1500s is reproduced below for those
-                interested. Sections 1.10.32 and 1.10.33 from "de Finibus
-                Bonorum et Malorum" by Cicero are also reproduced in their exact
-                original form, accompanied by English versions from the 1914
-                translation by H. Rackham.
-              </p>
-            </div>
-          )}
+        {/* <br /> */}
+        <div className="flex justify-center px-5 mt-10">
+          <Container>
+            {tabsContent.map(
+              ({ index, component }) => activeTab === index && component
+            )}
+          </Container>
         </div>
       </div>
     </>

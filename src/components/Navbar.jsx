@@ -19,7 +19,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  let className = "bg-[#fff] py-2 z-50";
+  let className = "bg-transparent py-2 z-50";
   if (isScrolled) {
     className =
       "bg-white z-50 drop-shadow-md py-2 transition ease-in-out delay-100 duration-300";

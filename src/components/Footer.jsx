@@ -4,7 +4,7 @@ import logo from "../assets/images/logo/logoDcv2.png";
 const Footer = () => {
   return (
     <>
-      <footer className="footer grid-rows-2 p-10 bg-[#8EC3B0] border-t-2 text-black">
+      <footer className="footer grid-rows-2 p-10 bg-[#070A52] border-t-2 text-white ">
         <div>
           <span className="footer-title">Services</span>
           <a className="link link-hover">Branding</a>
