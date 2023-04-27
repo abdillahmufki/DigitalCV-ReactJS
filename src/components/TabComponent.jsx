@@ -11,7 +11,7 @@ import CalcStaff from "../Features/CalcStaff";
 import CalcNote from "../Features/CalcNote";
 
 const TabComponents = () => {
-  const [activeTab, setActiveTab] = useState(1); // Set default active tab to 2
+  const [activeTab, setActiveTab] = useState(1); // Set default active tab to 1
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -131,12 +131,10 @@ const TabComponents = () => {
           </Responsive>
         </div>
         {/* <br /> */}
-        <div className="flex justify-center px-5 mt-10">
-          <Container>
-            {tabsContent.map(
-              ({ index, component }) => activeTab === index && component
-            )}
-          </Container>
+        <div className="flex justify-center mt-10">
+          {tabsContent.map(({ index, component }) => {
+            return activeTab === index && component;
+          })}
         </div>
       </div>
     </>
