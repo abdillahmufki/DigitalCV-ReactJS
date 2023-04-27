@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "../assets/images/logo/logoDcv2.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 

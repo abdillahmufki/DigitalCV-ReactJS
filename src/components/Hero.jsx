@@ -2,11 +2,14 @@ import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import Button from "./Button";
 import "../App.css";
-// import img from "../assets/images/p.png";
+import img from "../assets/images/content/hero.svg";
 
 const Hero = () => {
   return (
-    <Container className="container_hero">
+    <Container
+      justify="center"
+      className="container_hero lg:mt-[6rem] md:mt-[3rem] sm:mt-[5rem]"
+    >
       <Row className="hero-content leading-loose flex">
         <Col lg={12}>
           <p className="text-center text-blue-500 font-semibold">
@@ -26,7 +29,9 @@ const Hero = () => {
             <Button text="Contact" />
           </div>
         </Col>
-        <Col lg={12}>{/* <img src={img} alt="hero" /> */}</Col>
+        <Col lg={12}>
+          <img src={img} width={450} className="lg:ml-80 my-5" alt="hero img" />
+        </Col>
       </Row>
     </Container>
   );
