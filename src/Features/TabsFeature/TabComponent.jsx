@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import Responsive from "react-responsive";
 import { Container, Row, Col } from "react-grid-system";
-import AllFeature from "../Features/AllFeature";
-import DigitalCv from "../Features/DigitalCv";
-import Pinmyloc from "../Features/Pinmyloc";
-import CountList from "../Features/CountList";
-import Gds from "../Features/Gds";
-import CalcSales from "../Features/CalcSales";
-import CalcStaff from "../Features/CalcStaff";
-import CalcNote from "../Features/CalcNote";
+import {
+  AllFeature,
+  DigitalCv,
+  Pinmyloc,
+  CountList,
+  CalcNote,
+  CalcSales,
+  CalcStaff,
+  Gds,
+} from "./import";
 
 const TabComponents = () => {
   const [activeTab, setActiveTab] = useState(1); // Set default active tab to 1
@@ -55,35 +57,35 @@ const TabComponents = () => {
   const tabsContent = [
     {
       index: 1,
-      component: <AllFeature />,
+      component: <AllFeature key={1} />,
     },
     {
       index: 2,
-      component: <DigitalCv />,
+      component: <DigitalCv key={2} />,
     },
     {
       index: 3,
-      component: <Pinmyloc />,
+      component: <Pinmyloc key={3} />,
     },
     {
       index: 4,
-      component: <CountList />,
+      component: <CountList key={4} />,
     },
     {
       index: 5,
-      component: <Gds />,
+      component: <Gds key={5} />,
     },
     {
       index: 6,
-      component: <CalcSales />,
+      component: <CalcSales key={6} />,
     },
     {
       index: 7,
-      component: <CalcStaff />,
+      component: <CalcStaff key={7} />,
     },
     {
       index: 8,
-      component: <CalcNote />,
+      component: <CalcNote key={8} />,
     },
   ];
 
@@ -130,7 +132,6 @@ const TabComponents = () => {
             </Container>
           </Responsive>
         </div>
-        {/* <br /> */}
         <div className="flex justify-center mt-10">
           {tabsContent.map(({ index, component }) => {
             return activeTab === index && component;

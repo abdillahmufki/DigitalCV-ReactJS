@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,11 +24,11 @@ const Navbar = () => {
   let className = "bg-transparent py-2 z-50";
   if (isScrolled) {
     className =
-      "bg-white z-50 drop-shadow-md py-2 transition ease-in-out delay-100 duration-300";
+      "bg-white z-50 shadow py-2 transition ease-in-out delay-50 duration-300";
   }
 
   return (
-    <nav className={`navbar fixed w-full top-0 ${className} px-10 py-2 pt-3`}>
+    <nav className={`navbar sticky w-full top-0 ${className} px-10 py-2 pt-3`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

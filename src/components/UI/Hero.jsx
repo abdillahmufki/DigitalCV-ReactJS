@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import Button from "./Button";
-import "../App.css";
-import img from "../assets/images/content/hero.svg";
+import Button from "../Button";
+import "../../App.css";
+import img from "../../assets/images/content/hero.svg";
 
 const Hero = () => {
   return (
     <Container
       justify="center"
-      className="container_hero lg:mt-[6rem] md:mt-[3rem] sm:mt-[5rem]"
+      className="container_hero lg:mt-[5rem] md:mt-[3rem] sm:mt-[5rem]"
     >
       <Row className="hero-content leading-loose flex">
         <Col lg={12}>
@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
         </Col>
         <Col lg={12}>
-          <img src={img} width={450} className="lg:ml-80 my-5" alt="hero img" />
+          <img src={img} width={450} className="lg:ml-80 my-8" alt="hero img" />
         </Col>
       </Row>
     </Container>
