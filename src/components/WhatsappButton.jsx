@@ -11,13 +11,13 @@ const WhatsAppShareButton = ({ text, url }) => {
 
   return (
     <>
-      <a
-        href={whatsappShareLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 hover:animate-bounce"
-      >
-        <img src={waLogo} width={60} alt="" />
+      <a href={whatsappShareLink} target="_blank" rel="noopener noreferrer">
+        <div
+          className="fixed bottom-5 right-3 z-50 tooltip hover:tooltip-open tooltip-left tooltip-[#fff] font-bold"
+          data-tip="Hubungi Kami"
+        >
+          <img src={waLogo} width={60} alt="Whatsapp Logo" />
+        </div>
       </a>
     </>
   );

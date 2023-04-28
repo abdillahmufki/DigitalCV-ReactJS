@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-grid-system";
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 py-20 bg-[#070A52] border-t-2 text-white ">
+      <footer className="footer p-10 py-20 bg-slate-100 border-t-2 text-dark ">
         <div>
           {" "}
           <img src={logo} width={100} alt="" />
@@ -38,10 +38,10 @@ const Footer = () => {
           <a className="link link-hover">Github</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-10 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="footer px-10 py-10 border-t bg-slate-100 text-base-content border-base-300">
         <Container fluid>
           <Row className="flex items-center">
-            <Col lg={3} className="flex justify-between">
+            <Col lg={3} className="flex justify-between my-5">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const Footer = () => {
           </Row>
         </Container>
       </footer>
-      <footer className="flex justify-center footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <footer className="flex justify-center footer px-10 py-4 border-t-2 bg-white text-base-content border-base-300">
         <div>
           <p className="text-center">
             Copyright &copy; 2023 Gestalt Systech. All rights reserved

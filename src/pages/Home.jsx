@@ -1,27 +1,27 @@
 import React from "react";
-import { Container, Row, Col } from "react-grid-system";
 import "../App.css";
-import bgHero from "../assets/images/content/bg1.png";
-import TabComponent from "../components/TabComponent";
-import Hero from "../components/Hero";
-import Card from "../components/Card";
-
-import Partner from "../components/Partner";
+// import bgHero from "../assets/images/content/bg1.png";
+import TabComponent from "../Features/TabsFeature/TabComponent.jsx";
+import TabFeatureSuperiority from "../Features/TabsFeature/TabFeatureSuperiority.jsx";
+import Hero from "../components/UI/Hero.jsx";
+import Partner from "../Features/PartnerFeature/Partner.jsx";
 
 const Kandidat = () => {
   return (
     <>
       <div
         className="container-2xl hero-home hero min-h-screen bg-fixed"
-        style={{
-          backgroundImage: `url("${bgHero}")`,
-        }}
+        // style={{
+        //   backgroundImage: `url("${bgHero}")`,
+        // }}
       >
         <Hero />
       </div>
-
-      <TabComponent />
-      <div className="flex justify-center">
+      <TabFeatureSuperiority />
+      <div className="my-[80px]">
+        <TabComponent />
+      </div>
+      {/* <div className="flex justify-center">
         <Container fluid className="gap-3 my-10">
           <Row className="gap-y-5">
             <Col lg={3} md={6} sm={12}>
@@ -78,7 +78,7 @@ const Kandidat = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <Partner />
     </>
   );
