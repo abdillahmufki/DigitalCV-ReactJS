@@ -54,4 +54,8 @@ body {
   .container_hero {
     margin-top: 40px;
   }
+
+  .wrapping__about {
+    margin-top: 150px;
+  }
 }

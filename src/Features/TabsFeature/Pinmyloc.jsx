@@ -5,11 +5,11 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import contentImage from "../../assets/images/content/pinmyloc.svg";
 
 const listItems = [
-  "Memudahkan melamar dari manapun",
-  "Mencari pekerjaan sesuai keahlian dengan mudah",
-  "Menyimpan riwayat pencarian dan lamaran",
-  "Mendapatkan notifikasi pekerjaan terbaru",
-  "Mendapatkan notifikasi pekerjaan terbaru",
+  "Lorem Ipsum is simply dummy text",
+  "Lorem Ipsum is simply dummy text",
+  "Lorem Ipsum is simply dummy text",
+  "Lorem Ipsum is simply dummy text",
+  "Lorem Ipsum is simply dummy text",
 ];
 const Pinmyloc = () => {
   return (
@@ -22,14 +22,13 @@ const Pinmyloc = () => {
                 {" "}
                 <div>
                   <h2 className="text-2xl font-semibold">
-                    Kami menyajikan berbagai peluang karir dari berbagai
-                    industri dan kategori
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </h2>
                   <p className="my-10 text-[#626b79]">
-                    Kami percaya bahwa mencari pekerjaan seharusnya tidak lagi
-                    menjadi pengalaman yang melelahkan, tetapi bisa menjadi
-                    proses yang menyenangkan dan bermanfaat bagi masa depan
-                    karir Anda.
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book.
                   </p>
                   <ul>
                     {listItems.map((item, index) => (
