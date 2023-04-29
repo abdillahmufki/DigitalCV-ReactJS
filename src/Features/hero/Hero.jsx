@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import Button from "../Button";
+import Button from "../../components/Button";
 import "../../App.css";
 import img from "../../assets/images/content/hero.svg";
 
@@ -12,13 +12,17 @@ const Hero = () => {
     >
       <Row className="hero-content leading-loose flex">
         <Col lg={12}>
-          <p className="text-center text-blue-500 font-semibold">
-            Selamat Datang Di Gestalt Systech
-          </p>
-          <h2 className="text-4xl font-bold text-center">
-            Rampingkan operasional bisnis Anda dengan Platform yang terintegrasi
-            untuk produktivitas tanpa batas!
-          </h2>
+          <div className="my-2">
+            <p className="text-center text-blue-500 font-semibold">
+              Selamat Datang Di Gestalt Systech
+            </p>
+          </div>
+          <div className="my-5">
+            <h2 className="text-4xl font-semibold text-center">
+              Rampingkan operasional bisnis Anda dengan Platform yang
+              terintegrasi untuk produktivitas tanpa batas!
+            </h2>
+          </div>
           <p className="py-6 text-slate-600 text-center">
             Gestalt Systech, solusi teknologi modern untuk mengoptimalkan
             kinerja bisnis Anda. Kami telah merancang sistem dengan cermat agar
@@ -30,7 +34,13 @@ const Hero = () => {
           </div>
         </Col>
         <Col lg={12}>
-          <img src={img} width={450} className="lg:ml-80 my-8" alt="hero img" />
+          <img
+            src={img}
+            width={450}
+            className="lg:ml-80 my-8 pointer-events-none select-none"
+            draggable="false"
+            alt="hero img"
+          />
         </Col>
       </Row>
     </Container>

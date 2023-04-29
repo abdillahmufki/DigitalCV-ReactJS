@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import Responsive from "react-responsive";
 import { Container, Row, Col } from "react-grid-system";
-import {
-  AllFeature,
-  DigitalCv,
-  Pinmyloc,
-  CountList,
-  CalcNote,
-  CalcSales,
-  CalcStaff,
-  Gds,
-} from "./import";
 
 const TabComponents = () => {
   const [activeTab, setActiveTab] = useState(1); // Set default active tab to 1

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/images/logo/logoDcv2.png";
+import logo from "../assets/images/logo/footerSystech.png";
 import { Container, Row, Col } from "react-grid-system";
 
 const Footer = () => {
@@ -8,37 +8,40 @@ const Footer = () => {
       <footer className="footer p-10 py-20 bg-slate-100 border-t-2 text-dark ">
         <div>
           {" "}
-          <img src={logo} width={100} alt="" />
+          <img src={logo} width={350} alt="" />
         </div>
         <div>
-          <span className="footer-title">Services</span>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <span className="footer-title">SERVICES</span>
+          <a className="link link-hover">CalcNote</a>
+          <a className="link link-hover">CalcSales</a>
+          <a className="link link-hover">CalcStaff</a>
+          <a className="link link-hover">CountList</a>
+          <a className="link link-hover">DigitalCV</a>
+          <a className="link link-hover">GDS</a>
         </div>
         <div>
-          <span className="footer-title">Company</span>
+          <span className="footer-title">COMPANY</span>
           <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </div>
-        <div>
-          <span className="footer-title">Legal</span>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <a className="link link-hover">Careers</a>
+          <a className="link link-hover">Portfolio</a>
         </div>
         <div>
           <span className="footer-title">Social</span>
           <a className="link link-hover">Twitter</a>
           <a className="link link-hover">Instagram</a>
           <a className="link link-hover">Facebook</a>
-          <a className="link link-hover">Github</a>
+        </div>
+        <div>
+          <span className="footer-title">CONTACT</span>
+          <a className="link link-hover">support@gestaltsys.tech</a>
+          <a className="link link-hover">
+            Istana Pasteur Regency, <br /> Kompleks Ruko Kav. CRB <br /> 91 B,
+            Kota Bandung, <br /> Jawa Barat 40175
+          </a>
+          <a className="link link-hover">(022) 86065353</a>
         </div>
       </footer>
-      <footer className="footer px-10 py-10 border-t bg-slate-100 text-base-content border-base-300">
+      {/* <footer className="footer px-10 py-10 border-t bg-slate-100 text-base-content border-base-300">
         <Container fluid>
           <Row className="flex items-center">
             <Col lg={3} className="flex justify-between my-5">
@@ -88,7 +91,7 @@ const Footer = () => {
             </Col>
           </Row>
         </Container>
-      </footer>
+      </footer> */}
       <footer className="flex justify-center footer px-10 py-4 border-t-2 bg-white text-base-content border-base-300">
         <div>
           <p className="text-center">

@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/images/logo/logoDcv2.png";
+import logo from "../assets/images/logo/navbarSystech.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +81,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <img src={logo} width={65} alt="logo" className="flex items-center" />
+          <img src={logo} width={50} alt="logo" className="flex items-center" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
