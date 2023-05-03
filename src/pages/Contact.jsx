@@ -117,7 +117,7 @@ const Contact = () => {
                       tren pengembangan web terbaru dan penawaran khusus TMS
                     </label>
                   </div>
-                  <Button text="Kirim Permintaan" />
+                  <Button>Kirim</Button>
                 </Col>
               </Row>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import "../../App.css";
 import img from "../../assets/images/content/hero.svg";
@@ -13,7 +14,7 @@ const Hero = () => {
       <Row className="hero-content leading-loose flex">
         <Col lg={12}>
           <div className="my-2">
-            <p className="text-center text-blue-500 font-semibold">
+            <p className="text-center text-lg text-blue-500 font-semibold">
               Selamat Datang Di Gestalt Systech
             </p>
           </div>
@@ -30,7 +31,9 @@ const Hero = () => {
             kemajuan teknologi bersama kami!
           </p>
           <div className="text-center">
-            <Button text="Contact" />
+            <Link to="/contact">
+              <Button>Contact</Button>
+            </Link>
           </div>
         </Col>
         <Col lg={12}>
