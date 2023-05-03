@@ -58,4 +58,12 @@ body {
   .wrapping__about {
     margin-top: 150px;
   }
+
+  .wrap__about {
+    padding: 3rem 0;
+  }
+
+  .wrap__keahlian {
+    position: static;
+  }
 }

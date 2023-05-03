@@ -7,6 +7,39 @@ import Internal from "../../assets/images/logo/Internal.png";
 import Campina from "../../assets/images/logo/Campina.png";
 import Nikos from "../../assets/images/logo/Nikos.png";
 
+const listItems = [
+  {
+    id: 1,
+    img: mps,
+    alt: "mps image",
+  },
+  {
+    id: 2,
+    img: bsb,
+    alt: "bsb image",
+  },
+  {
+    id: 3,
+    img: ultra,
+    alt: "ultra image",
+  },
+  {
+    id: 4,
+    img: Internal,
+    alt: "Internal image",
+  },
+  {
+    id: 5,
+    img: Campina,
+    alt: "Campina image",
+  },
+  {
+    id: 6,
+    img: Nikos,
+    alt: "Nikos image",
+  },
+];
+
 const Partner = () => {
   return (
     <>
@@ -26,12 +59,9 @@ const Partner = () => {
         <marquee>
           <div className="my-5 py-5">
             <Row className="gap-y-5 gap-x-10">
-              <img src={bsb} alt="instagram images" />
-              <img src={mps} width={200} alt="instagram images" />
-              <img src={ultra} width={100} height={60} alt="instagram images" />
-              <img src={Internal} alt="instagram images" />
-              <img src={Campina} alt="instagram images" />
-              <img src={Nikos} alt="instagram images" />
+              {listItems.map((item) => (
+                <img key={item.id} src={item.img} width={130} alt={item.alt} />
+              ))}
             </Row>
           </div>
         </marquee>
