@@ -66,4 +66,10 @@ body {
   .wrap__keahlian {
     position: static;
   }
+  .about__container .header__about {
+    font-size: 24px;
+  }
+  .wrap__about h2 {
+    color: #fff;
+  }
 }

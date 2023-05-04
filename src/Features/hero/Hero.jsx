@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-grid-system";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import "../../App.css";
-import img from "../../assets/images/content/hero.svg";
+import img from "../../assets/images/content/hero.gif";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-out", // Jenis easing yang digunakan
+      delay: 200, // Delay animasi dalam milidetik
+    });
+  }, []);
   return (
     <Container
       justify="center"
@@ -14,11 +23,14 @@ const Hero = () => {
       <Row className="hero-content leading-loose flex">
         <Col lg={12}>
           <div className="my-2">
-            <p className="text-center text-lg text-blue-500 font-semibold">
+            <p
+              className="text-center text-lg text-blue-500 font-semibold"
+              data-aos="fade-down"
+            >
               Selamat Datang Di Gestalt Systech
             </p>
           </div>
-          <div className="my-5">
+          <div className="my-5" data-aos="fade-right">
             <h2 className="text-4xl font-semibold text-center">
               Rampingkan operasional bisnis Anda dengan Platform yang
               terintegrasi untuk produktivitas tanpa batas!
@@ -43,6 +55,7 @@ const Hero = () => {
             className="lg:ml-80 my-8 pointer-events-none select-none"
             draggable="false"
             alt="hero img"
+            data-aos="fade-right"
           />
         </Col>
       </Row>

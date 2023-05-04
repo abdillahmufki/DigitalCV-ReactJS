@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-grid-system";
 import aboutKeahlian from "../../assets/images/content/aboutAhli.jpg";
 import AboutWrap from "../../components/AboutWrap";
 import "../../App.css";
-
-const breaking = <br />;
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const listItem = [
   {
@@ -24,6 +24,13 @@ const listItem = [
 ];
 
 const AboutKeahlian = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-out", // Jenis easing yang digunakan
+      delay: 200, // Delay animasi dalam milidetik
+    });
+  }, []);
   return (
     <>
       <Container>
@@ -41,11 +48,12 @@ const AboutKeahlian = () => {
               className="my-8 pointer-events-none select-none"
               draggable="false"
               alt="hero img"
+              data-aos="fade-up"
             />
             <div className="wrap__keahlian lg:relative lg:bottom-36 lg:left-24">
               <AboutWrap>
                 {listItem.map((item) => (
-                  <div key={item.id} className="my-10">
+                  <div key={item.id} className="my-10" data-aos="fade-left">
                     <h2 className="text-3xl">{item.title}</h2>
                     <p className="text-lg text-slate-500">{item.desc}</p>
                     <br />
