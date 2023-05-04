@@ -5,7 +5,7 @@ const Button = (props) => {
     <button
       onClick={props.onClick}
       disabled={props.disabled}
-      className="btn bg-gradient-to-r from-blue-900 to-blue-400 border-none rounded-md py-1 px-5 text-white font-medium hover:opacity-75"
+      className="btn bg-gradient-to-r from-blue-900 to-blue-400 border-none rounded-full py-1 px-5 text-white font-medium hover:opacity-75 hover:-translate-y-1"
     >
       {props.children}
     </button>

@@ -26,7 +26,7 @@ const Stepper = () => {
       >
         <div>
           <h2
-            className="text-center text-3xl font-semibold text-blue-500 my-10"
+            className="header__about-gestalt text-center text-3xl font-semibold text-blue-500 my-10"
             data-aos="fade-down"
           >
             About Gestalt Systech
@@ -42,7 +42,7 @@ const Stepper = () => {
               berdiri 2007, yang merupakan perusahaan human capital consultant.
             </div>
             <div className="divider">
-              <ArrowLongDownIcon width={50} />
+              <ArrowLongDownIcon width={70} color="white" />
             </div>
             <div className="grid card bg-base-300 rounded-box place-items-center p-5">
               Seiring dengan perkembangan perusahaan dan peningkatan kebutuhan
