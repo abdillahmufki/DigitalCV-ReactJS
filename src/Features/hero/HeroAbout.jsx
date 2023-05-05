@@ -10,7 +10,7 @@ const HeroAbout = () => {
         <Col lg={12}>
           <div className="my-2">
             <h2 className="text-center text-xl text-blue-500 font-semibold">
-              About
+              ABOUT
             </h2>
           </div>
           <div className="my-5">

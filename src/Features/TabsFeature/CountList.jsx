@@ -44,11 +44,11 @@ const CountList = () => {
               </Col>
               <Col lg={6}>
                 {" "}
-                <div className="static">
+                <div className="lg:static">
                   <img
                     src={contentImage}
                     alt="content image"
-                    className="absolute ms:relative"
+                    className="lg:absolute ms:relative"
                   />
                 </div>
               </Col>
