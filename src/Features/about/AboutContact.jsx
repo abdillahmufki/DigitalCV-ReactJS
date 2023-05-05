@@ -26,7 +26,7 @@ const AboutContact = () => {
         </div>
         <div className="ml-10" data-aos="fade-left">
           <h2 className="header__about text-black text-4xl">
-            Tertarik buat gabung?
+            Tertarik dengan produk kami?
           </h2>
           <div className="my-5">
             <Link to="/contact">

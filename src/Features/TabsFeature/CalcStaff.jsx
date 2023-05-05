@@ -44,11 +44,11 @@ const CalcStaff = () => {
               </Col>
               <Col lg={6}>
                 {" "}
-                <div className="static">
+                <div className="lg:static">
                   <img
                     src={contentImage}
                     alt="content image"
-                    className="absolute"
+                    className="lg:absolute"
                   />
                 </div>
               </Col>

@@ -55,6 +55,10 @@ body {
     margin-top: 40px;
   }
 
+  .container_hero h2 {
+    text-align: center;
+  }
+
   .wrapping__about {
     margin-top: 150px;
   }

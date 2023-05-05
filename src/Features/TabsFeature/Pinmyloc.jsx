@@ -23,7 +23,7 @@ const Pinmyloc = () => {
                 <div>
                   <h2 className="text-2xl font-semibold">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    typesetting industry.lg:
                   </h2>
                   <p className="my-10 text-[#626b79]">
                     Lorem Ipsum has been the industry's standard dummy text ever
@@ -45,11 +45,11 @@ const Pinmyloc = () => {
               </Col>
               <Col lg={6}>
                 {" "}
-                <div className="static">
+                <div className="lg:static">
                   <img
                     src={contentImage}
                     alt="content image"
-                    className="absolute"
+                    className="lg:absolute"
                   />
                 </div>
               </Col>
