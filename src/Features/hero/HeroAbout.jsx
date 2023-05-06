@@ -9,9 +9,7 @@ const HeroAbout = () => {
       <Row className="hero-content leading-loose flex" justify="center">
         <Col lg={12}>
           <div className="my-2">
-            <h2 className="text-center text-xl text-blue-500 font-semibold">
-              ABOUT
-            </h2>
+            <h2 className="text-center text-xl font-semibold">ABOUT</h2>
           </div>
           <div className="my-5">
             <h2 className="text-4xl font-semibold text-center">
@@ -24,6 +22,7 @@ const HeroAbout = () => {
           <img
             src={img}
             width={450}
+            height={450}
             className="lg:ml-80 my-8 pointer-events-none select-none"
             draggable="false"
             alt="hero img"

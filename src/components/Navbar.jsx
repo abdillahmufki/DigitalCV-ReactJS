@@ -8,11 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.pageYOffset > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,11 +16,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  let className = "bg-transparent py-2 z-50";
-  if (isScrolled) {
-    className =
-      "bg-white z-50 shadow py-2 transition ease-in-out delay-50 duration-300";
-  }
+  const className = `bg-transparent py-2 z-50 ${
+    isScrolled
+      ? "bg-white z-50 shadow py-2 transition ease-in-out delay-50 duration-300"
+      : ""
+  }`;
 
   return (
     <nav className={`navbar sticky w-full top-0 ${className} px-10 py-2 pt-3`}>
@@ -51,7 +47,7 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-blue-800 text-white rounded-box w-52"
           >
             <li>
-              <Link to="/">Beranda</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/services">Services</Link>
@@ -68,7 +64,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/">Beranda</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/services">Services</Link>

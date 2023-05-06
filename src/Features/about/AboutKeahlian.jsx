@@ -45,7 +45,7 @@ const AboutKeahlian = () => {
           <Col lg={12}>
             <img
               src={aboutKeahlian}
-              className="my-8 pointer-events-none select-none"
+              className="my-8 pointer-events-none select-none w-auto"
               draggable="false"
               alt="hero img"
               data-aos="fade-up"

@@ -16,7 +16,7 @@ const WhatsAppShareButton = ({ text, url }) => {
           className="fixed bottom-5 right-3 z-50 tooltip hover:tooltip-open tooltip-left tooltip-[#fff] font-bold"
           data-tip="Hubungi Kami"
         >
-          <img src={waLogo} width={60} alt="Whatsapp Logo" />
+          <img src={waLogo} width={60} height={60} alt="Whatsapp Logo" />
         </div>
       </a>
     </>
