@@ -7,6 +7,7 @@ import "../../App.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 const contentObj = [
   {
     index: 1,
@@ -37,11 +38,18 @@ const contentObj = [
 const About = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi dalam milidetik
-      easing: "ease-out", // Jenis easing yang digunakan
-      delay: 200, // Delay animasi dalam milidetik
+      duration: 1000,
+      easing: "ease-out",
+      delay: 200,
     });
   }, []);
+
+  const renderCollapse = () => {
+    return contentObj.map((item, index) => (
+      <Collapse key={index} title={item.title} content={item.content} />
+    ));
+  };
+
   return (
     <>
       <div className="wrapping__about">
@@ -89,15 +97,7 @@ const About = () => {
           </Col>
           <Col className="flex items-center" lg={6} md={6} sm={12}>
             <div className="text-dark" data-aos="fade-left">
-              <div className="text-center">
-                {contentObj.map((item, index) => (
-                  <Collapse
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                  />
-                ))}
-              </div>
+              <div className="text-center">{renderCollapse()}</div>
             </div>
           </Col>
         </Row>
@@ -105,5 +105,4 @@ const About = () => {
     </>
   );
 };
-
 export default About;

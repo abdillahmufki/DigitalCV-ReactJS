@@ -47,7 +47,7 @@ const CalcNote = () => {
                 <div className="lg:static">
                   <img
                     src={contentImage}
-                    alt="content image"
+                    alt="calcnote image"
                     className="lg:absolute"
                   />
                 </div>

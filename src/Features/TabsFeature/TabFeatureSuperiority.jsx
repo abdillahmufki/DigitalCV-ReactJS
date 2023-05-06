@@ -3,7 +3,7 @@ import Responsive from "react-responsive";
 import { Container, Row, Col } from "react-grid-system";
 
 const TabComponents = () => {
-  const [activeTab, setActiveTab] = useState(1); // Set default active tab to 1
+  const [activeTab, setActiveTab] = useState(1);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
