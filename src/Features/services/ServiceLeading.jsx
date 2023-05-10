@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "../../App.css";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import Card from "../../components/Card";
 
 const listItem = [
@@ -94,7 +94,7 @@ export default function ServiceLeading() {
             >
               {listItem.map((item, index) => {
                 return (
-                  <SwiperSlide key={index}>
+                  <SwiperSlide key={index} className="mx-5">
                     <Link to={item.url}>
                       <Card
                         img={item.img}
