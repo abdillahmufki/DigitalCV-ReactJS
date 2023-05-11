@@ -8,7 +8,7 @@ import "../../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const contentObj = [
+const listItem = [
   {
     index: 1,
     title: "Lorem Ipsum is simply dummy text",
@@ -46,64 +46,60 @@ const About = () => {
 
   return (
     <>
-      <div className="wrapping__about">
-        <div className="pt-24">
-          <div className="text-center px-10">
-            <h2 className="text-4xl py-5 font-semibold" data-aos="fade-down">
-              Meningkatkan performa bisnis melalui integrasi
-            </h2>
-            <p className="text-[#7D7784]" data-aos="fade-right">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's <br /> standard
-              dummy text ever since the 1500s, when an unknown printer took a
-              galley of type <br /> and scrambled it to make a type specimen
-              book.
-            </p>
-            <div className="my-3">
-              <a
-                className="link link-hover flex justify-center gap-x-2 text-blue-800"
-                data-aos="fade-down"
-              >
-                Pelajari lebih lanjut
-                <span className="hover:animate-bounce">
-                  <ArrowLongRightIcon className="h-6 w-6 text-blue-800" />
-                </span>
-              </a>
+      <div className="sm:pt-24 ">
+        <div className="text-center sm:px-10 px-5">
+          <h2
+            className="text-4xl sm:text-2xl md:text-3xl py-5 font-semibold"
+            data-aos="fade-down"
+          >
+            Meningkatkan performa bisnis melalui integrasi
+          </h2>
+          <p className="text-[#7D7784] text-lg" data-aos="fade-right">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's <br /> standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of
+            type <br /> and scrambled it to make a type specimen book.
+          </p>
+          <div className="my-3">
+            <a
+              className="link link-hover flex justify-center gap-x-2 text-blue-800"
+              data-aos="fade-down"
+            >
+              Pelajari lebih lanjut
+              <span className="hover:animate-bounce">
+                <ArrowLongRightIcon className="h-6 w-6 text-blue-800" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container grid grid-cols-1 sm:grid-cols-2 sm:gap-10 gap-y-10 px-10 overflow-hidden mt-10">
+        <div class="text-dark">
+          <div class="text-center">
+            <img
+              src={imgAbout}
+              class="pointer-events-none select-none"
+              draggable="false"
+              alt="content img"
+              width={400}
+              data-aos="fade-right"
+            />
+          </div>
+        </div>
+        <div class="md:px-8 sm:px-0" data-aos="fade-left">
+          <div class="text-dark md:mt-16">
+            <div class="text-center">
+              {listItem.map((item, index) => (
+                <Collapse
+                  key={index}
+                  title={item.title}
+                  content={item.content}
+                />
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <Container>
-        <Row>
-          <Col lg={6} md={6} sm={12}>
-            <div className="text-dark">
-              <div className="text-center">
-                <img
-                  src={imgAbout}
-                  className="pointer-events-none select-none"
-                  draggable="false"
-                  alt="content img"
-                  width={400}
-                  data-aos="fade-right"
-                />
-              </div>
-            </div>
-          </Col>
-          <Col className="flex items-center" lg={6} md={6} sm={12}>
-            <div className="text-dark" data-aos="fade-left">
-              <div className="text-center">
-                {contentObj.map((item, index) => (
-                  <Collapse
-                    key={index}
-                    title={item.title}
-                    content={item.content}
-                  />
-                ))}
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
     </>
   );
 };

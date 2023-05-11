@@ -20,11 +20,8 @@ const AboutUs = () => {
   return (
     <>
       <div
-        className="container-2xl hero-home hero min-h-screen bg-fixed"
+        className="container-2xl hero-home hero min-h-screen"
         data-aos="fade-right"
-        // style={{
-        //   backgroundImage: `url("${bgHero}")`,
-        // }}
       >
         <HeroAbout data-aos="fade-up" />
       </div>
@@ -32,7 +29,7 @@ const AboutUs = () => {
       <div className="my-5 flex justify-center">
         <AboutGestalt data-aos="fade-right" />
       </div>
-      <div className="my-5 px-5 flex justify-center">
+      <div className="my-5 flex justify-center">
         <AboutCard />
       </div>
       <div className="my-5 px-5 flex justify-center">
