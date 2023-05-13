@@ -57,7 +57,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/">
+        <Link to="/" className="ml-5">
           <img src={logo} width={50} alt="logo" className="flex items-center" />
         </Link>
       </div>

@@ -17,25 +17,6 @@ body {
   background: #fff;
   scroll-behavior: smooth;
 }
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #070a52;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 @media screen and (max-width: 400px) {
   .hero-content h1 {
@@ -44,9 +25,11 @@ body {
   .searchBar__div input {
     width: 320px;
   }
+
   .searchBar__div input::placeholder {
     font-size: 12px;
   }
+
   .img-hero {
     width: 350px;
   }
@@ -74,9 +57,11 @@ body {
   .wrap__keahlian {
     position: static;
   }
+
   .about__container .header__about {
     font-size: 24px;
   }
+
   .wrap__about h2 {
     color: #fff;
   }
