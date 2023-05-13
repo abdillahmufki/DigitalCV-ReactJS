@@ -25,9 +25,11 @@ body {
   .searchBar__div input {
     width: 320px;
   }
+
   .searchBar__div input::placeholder {
     font-size: 12px;
   }
+
   .img-hero {
     width: 350px;
   }
@@ -55,9 +57,11 @@ body {
   .wrap__keahlian {
     position: static;
   }
+
   .about__container .header__about {
     font-size: 24px;
   }
+
   .wrap__about h2 {
     color: #fff;
   }

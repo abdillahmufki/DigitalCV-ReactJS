@@ -79,22 +79,44 @@ export default function ServiceLeading() {
           <div className="w-full">
             <Swiper
               slidesPerView={4}
+              spaceBetween={30}
+              breakpoints={{
+                // For small screens
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                // For medium screens
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                // For large screens
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+                // For extra large screens
+                1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+              }}
               centeredSlides={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
-              spaceBetween={30}
               grabCursor={true}
               pagination={{
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="mySwiper"
+              className="mySwiper gap-10"
             >
               {listItem.map((item, index) => {
                 return (
-                  <SwiperSlide key={index} className="mx-5">
+                  <SwiperSlide key={index}>
                     <Link to={item.url}>
                       <Card
                         img={item.img}
