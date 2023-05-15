@@ -62,15 +62,15 @@ const listItem = [
 export default function ServiceLeading() {
   return (
     <>
-      <div>
+      <div className="my-40">
         <div>
-          <h2 className="text-3xl text-center font-semibold p-5">
+          <h2 className="text-3xl text-center font-normal p-5">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
             produktivitas, dan mengoptimalkan biaya.
           </h2>
         </div>
-        <div className="my-48">
+        <div className="my-10">
           <div className="my-10">
             <h3 className="font-semibold text-2xl text-center">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
@@ -85,21 +85,25 @@ export default function ServiceLeading() {
                 320: {
                   slidesPerView: 1,
                   spaceBetween: 10,
+                  centeredSlidesBounds: true,
                 },
                 // For medium screens
                 640: {
                   slidesPerView: 2,
                   spaceBetween: 20,
+                  centeredSlidesBounds: true,
                 },
                 // For large screens
                 768: {
                   slidesPerView: 3,
                   spaceBetween: 30,
+                  centeredSlidesBounds: true,
                 },
                 // For extra large screens
                 1024: {
                   slidesPerView: 4,
                   spaceBetween: 40,
+                  centeredSlidesBounds: true,
                 },
               }}
               centeredSlides={true}
@@ -112,7 +116,7 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="mySwiper gap-10"
+              className="sm:mx-10"
             >
               {listItem.map((item, index) => {
                 return (

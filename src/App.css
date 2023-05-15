@@ -65,6 +65,9 @@ body {
   .wrap__about h2 {
     color: #fff;
   }
+  .mySwiper {
+    padding: 50px 0 50px 0;
+  }
 }
 
 // =================== SWIPER =================== //

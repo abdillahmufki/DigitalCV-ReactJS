@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Card = (props) => {
   return (
-    <div className="card card-compact w-80 bg-base-100 shadow-xl my-10">
+    <div className="card card-compact w-80 bg-[#fff] shadow-xl my-10">
       <figure>
         <img
           className="w-full h-48 object-cover transform hover:scale-110 transition duration-300"
