@@ -116,7 +116,6 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="sm:mx-10"
             >
               {listItem.map((item, index) => {
                 return (

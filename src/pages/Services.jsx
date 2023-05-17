@@ -2,6 +2,9 @@ import React from "react";
 import HeroServices from "../Features/hero/HeroService";
 import ServiceLeading from "../Features/services/ServiceLeading";
 import ServiceLifecycle from "../Features/services/ServiceLifecycle";
+import ServiceCollaborate from "../Features/services/ServiceCollaborate";
+import ServiceBenefit from "../Features/services/ServiceBenefit";
+import AboutContact from "../Features/about/AboutContact";
 
 const Services = () => {
   return (
@@ -14,6 +17,15 @@ const Services = () => {
       </div>
       <div>
         <ServiceLifecycle />
+      </div>
+      <div>
+        <ServiceCollaborate />
+      </div>
+      <div>
+        <ServiceBenefit />
+      </div>
+      <div>
+        <AboutContact />
       </div>
     </>
   );

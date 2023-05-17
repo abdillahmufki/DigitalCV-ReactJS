@@ -20,9 +20,6 @@ const Kandidat = () => {
       <div
         className="container-2xl hero-home hero min-h-screen bg-fixed"
         data-aos="fade-right"
-        // style={{
-        //   backgroundImage: `url("${bgHero}")`,
-        // }}
       >
         <Hero data-aos="fade-up" />
       </div>
