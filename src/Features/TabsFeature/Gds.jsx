@@ -2,7 +2,7 @@ import React from "react";
 import ItemWrap from "../../components/ItemWrap";
 import { Container, Row, Col } from "react-grid-system";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import contentImage from "../../assets/images/content/job.png";
+import contentImage from "../../assets/images/content/gdsContent.svg";
 
 const listItems = [
   "Lorem Ipsum is simply dummy text",

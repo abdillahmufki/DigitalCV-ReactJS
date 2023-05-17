@@ -21,7 +21,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/aboutus" element={<AboutUs />} />
-
             {/* catch-all route for 404 errors */}
             <Route path="*" element={<ErorPage />} />
           </Routes>

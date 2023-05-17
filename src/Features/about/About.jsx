@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col } from "react-grid-system";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import imgAbout from "../../assets/images/content/about.svg";
 import Collapse from "../../components/Collapse";
@@ -73,12 +72,12 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div class="container grid grid-cols-1 sm:grid-cols-2 sm:gap-10 gap-y-10 px-10 overflow-hidden mt-10">
-        <div class="text-dark">
-          <div class="text-center">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 sm:gap-10 gap-y-10 px-10 overflow-hidden mt-10">
+        <div className="text-dark">
+          <div className="text-center">
             <img
               src={imgAbout}
-              class="pointer-events-none select-none"
+              className="pointer-events-none select-none"
               draggable="false"
               alt="content img"
               width={400}
@@ -86,9 +85,9 @@ const About = () => {
             />
           </div>
         </div>
-        <div class="md:px-8 sm:px-0" data-aos="fade-left">
-          <div class="text-dark md:mt-16">
-            <div class="text-center">
+        <div className="md:px-8 sm:px-0" data-aos="fade-left">
+          <div className="text-dark md:mt-16">
+            <div className="text-center">
               {listItem.map((item, index) => (
                 <Collapse
                   key={index}

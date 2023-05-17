@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Responsive from "react-responsive";
-import { Container, Row, Col } from "react-grid-system";
+import { Container } from "react-grid-system";
 import {
   AllFeature,
   DigitalCv,
@@ -13,7 +13,7 @@ import {
 } from "./import";
 
 const TabComponents = () => {
-  const [activeTab, setActiveTab] = useState(1); // Set default active tab to 1
+  const [activeTab, setActiveTab] = useState(2); // Set default active tab to 1
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);

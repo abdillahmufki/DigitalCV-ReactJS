@@ -3,15 +3,22 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-grid-system";
 import logoDigitalCV from "../../assets/images/logo/logoDcv2.png";
 import dcvContent from "../../assets/images/content/job.png";
+import gdsContent from "../../assets/images/content/gdsContent.png";
 import CardContentTab from "../../components/CardContentTab";
+import {
+  countlist,
+  gds,
+  pinmyloc,
+  digitalcv,
+} from "../../assets/images/logo/import";
 
 const features = [
   {
     id: 1,
     link: "https://digitalcv.id/id/",
-    imgLogo: logoDigitalCV,
+    imgLogo: gds,
     altLogo: "logo",
-    imgContent: dcvContent,
+    imgContent: gdsContent,
     content: "Gds",
     description:
       "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..",
@@ -19,7 +26,7 @@ const features = [
   {
     id: 2,
     link: "https://digitalcv.id/id/",
-    imgLogo: logoDigitalCV,
+    imgLogo: countlist,
     altLogo: "logo",
     imgContent: dcvContent,
     content: "CalcNote",
@@ -49,7 +56,7 @@ const features = [
   {
     id: 5,
     link: "https://digitalcv.id/id/",
-    imgLogo: logoDigitalCV,
+    imgLogo: countlist,
     altLogo: "logo coutlist",
     imgContent: dcvContent,
     content: "CountList",
@@ -69,7 +76,7 @@ const features = [
   {
     id: 7,
     link: "https://digitalcv.id/id/",
-    imgLogo: logoDigitalCV,
+    imgLogo: pinmyloc,
     altLogo: "logo Pinmyloc",
     imgContent: dcvContent,
     content: "Pinmyloc",

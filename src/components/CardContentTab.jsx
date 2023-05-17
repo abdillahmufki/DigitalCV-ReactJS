@@ -6,7 +6,7 @@ const CardContentTab = (props) => {
     <>
       <ItemWrap>
         <div className="logo__image flex justify-center">
-          <img src={props.imgLogo} width={80} alt={props.altLogo} />
+          <img src={props.imgLogo} style={{ height: 70 }} alt={props.altLogo} />
         </div>
         <div className="flex justify-center">
           <div className="my-5">
