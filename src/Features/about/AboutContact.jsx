@@ -16,7 +16,7 @@ const AboutContact = () => {
   }, []);
   return (
     <>
-      <div className="about__container w-full h-full bg-white rounded-t-box text-white font-bold flex justify-center items-center p-14">
+      <div className="flex items-center justify-center px-5 my-32 overflow-hidden font-bold text-white bg-white about__container rounded-t-box">
         <div>
           <img
             src={aboutContactImages}
@@ -25,7 +25,7 @@ const AboutContact = () => {
           />
         </div>
         <div className="ml-10" data-aos="fade-left">
-          <h2 className="header__about text-black text-4xl">
+          <h2 className="text-4xl text-black header__about">
             Tertarik dengan produk kami?
           </h2>
           <div className="my-5">

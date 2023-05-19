@@ -23,7 +23,6 @@ const Kandidat = () => {
       >
         <Hero data-aos="fade-up" />
       </div>
-
       <div className="my-[80px]" data-aos="fade-up">
         <TabComponent />
       </div>

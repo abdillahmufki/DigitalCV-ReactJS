@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container } from "react-grid-system";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -62,21 +63,21 @@ const listItem = [
 export default function ServiceLeading() {
   return (
     <>
-      <div className="my-40">
+      <div className="mb-40 mt-30">
         <div>
-          <h2 className="text-3xl text-center font-normal p-5">
+          <h2 className="p-5 text-3xl font-normal text-center">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
             produktivitas, dan mengoptimalkan biaya.
           </h2>
         </div>
-        <div className="my-10">
+        <div>
           <div className="my-10">
-            <h3 className="font-semibold text-2xl text-center">
+            <h3 className="text-2xl font-semibold text-center">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
             </h3>
           </div>
-          <div className="w-full">
+          <Container fluid>
             <Swiper
               slidesPerView={4}
               spaceBetween={30}
@@ -116,6 +117,7 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
+              className="max-[428px]:ml-5"
             >
               {listItem.map((item, index) => {
                 return (
@@ -132,7 +134,7 @@ export default function ServiceLeading() {
                 );
               })}
             </Swiper>
-          </div>
+          </Container>
         </div>
       </div>
     </>

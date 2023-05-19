@@ -29,7 +29,7 @@ const Navbar = () => {
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -44,7 +44,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-blue-800 text-white rounded-box w-52"
+            className="p-2 mt-3 text-white bg-blue-800 shadow menu menu-compact dropdown-content rounded-box w-52"
           >
             <li>
               <Link to="/">Home</Link>
@@ -61,8 +61,8 @@ const Navbar = () => {
           <img src={logo} width={50} alt="logo" className="flex items-center" />
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="hidden navbar-center lg:flex">
+        <ul className="px-1 menu menu-horizontal">
           <li>
             <Link to="/">Home</Link>
           </li>
