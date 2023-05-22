@@ -67,7 +67,7 @@ const ServiceLifecycle = () => {
           align="center"
           justify="center"
           direction="row"
-          className="my-10"
+          className="my-10 overflow-hidden"
         >
           <service.Component {...service} />
         </Container>

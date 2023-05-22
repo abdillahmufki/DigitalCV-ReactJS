@@ -7,7 +7,7 @@ import Button from "../../components/Button";
 const HeroService = () => {
   return (
     <Container
-      className="flex flex-col items-center justify-between container_hero lg:flex-row sm:justify-center lg:items-start"
+      className="flex flex-col items-center justify-between container_hero lg:flex-row sm:justify-center lg:items-start overflow-hidden"
       fluid
     >
       <div className="lg:mt-28 lg:mr-20">

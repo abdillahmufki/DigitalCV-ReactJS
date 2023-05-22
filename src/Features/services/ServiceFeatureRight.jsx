@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Col, Row } from "react-grid-system";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ServiceFeatureRight = (props) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-out", // Jenis easing yang digunakan
+      delay: 200, // Delay animasi dalam milidetik
+    });
+  }, []);
   return (
-    <Container>
+    <Container data-aos="fade-left">
       <Row align="center" justify="center" direction="row">
         <Col lg={6} md={12} sm={12}>
           <div className="my-5">
