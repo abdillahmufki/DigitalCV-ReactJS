@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-grid-system";
 import project from "../../assets/images/content/project.png";
 import team from "../../assets/images/content/team.png";
 import handshake from "../../assets/images/content/handshake.png";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const listItem = [
   {
     title: "Berbasis Proyek",
@@ -26,17 +27,24 @@ const listItem = [
 ];
 
 const ServiceCollaborate = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-out", // Jenis easing yang digunakan
+      delay: 200, // Delay animasi dalam milidetik
+    });
+  }, []);
   return (
     <Container fluid className="my-52">
-      <div className="mb-20">
+      <div className="mb-20" data-aos="fade-down">
         <h2 className="text-4xl text-center">Cara bekerja dengan kami</h2>
         <h3 className="text-xl text-center">
           Kami membangun, menguji, meluncurkan, dan meningkatkan aplikasi web
           dan mobile yang kompleks
         </h3>
       </div>
-      <div className="my-10">
-        <Row className="px-10 gap-y-5">
+      <div className="my-10" data-aos="fade-up">
+        <Row className="px-5 gap-y-5">
           {listItem.map((item, index) => (
             <Col lg={4} md={6} sm={12} key={index}>
               <div className="px-6 py-10 text-center duration-300 transform bg-[#f5f5f5] shadow-lg hover:shadow-xl border-slate-400 rounded-xl hover:transition hover:scale-105 hover:z-10 h-[31rem] max-[428px]:h-[36rem]">

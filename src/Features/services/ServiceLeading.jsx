@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container } from "react-grid-system";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,9 @@ import "swiper/css/pagination";
 import "../../App.css";
 import { Autoplay, Pagination } from "swiper";
 import Card from "../../components/Card";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const listItem = [
   {
@@ -61,10 +64,17 @@ const listItem = [
   },
 ];
 export default function ServiceLeading() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Durasi animasi dalam milidetik
+      easing: "ease-out", // Jenis easing yang digunakan
+      delay: 200, // Delay animasi dalam milidetik
+    });
+  }, []);
   return (
     <>
-      <div className="mb-40 mt-30">
-        <div>
+      <div className="mb-40 mt-30 overflow-hidden">
+        <div data-aos="fade-right">
           <h2 className="p-5 text-3xl font-normal text-center">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
@@ -72,7 +82,7 @@ export default function ServiceLeading() {
           </h2>
         </div>
         <div>
-          <div className="my-10">
+          <div className="my-10" data-aos="fade-left">
             <h3 className="text-2xl font-semibold text-center">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
             </h3>
