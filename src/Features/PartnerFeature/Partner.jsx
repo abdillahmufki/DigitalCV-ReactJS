@@ -55,10 +55,13 @@ const Partner = () => {
     <>
       <div className="pt-24 text-dark">
         <div className="text-center">
-          <h2 className="text-4xl py-5 font-semibold" data-aos="fade-down">
+          <h2
+            className="text-4xl py-5 font-semibold dark:text-white"
+            data-aos="fade-down"
+          >
             Dipercaya oleh berbagai bisnis di segala jenis industri
           </h2>
-          <p data-aos="fade-right">
+          <p data-aos="fade-right" className="dark:text-white">
             Puluhan ribu bisnis dan perusahaan terkemuka, dari skala kecil
             sampai besar, di seluruh Indonesia telah mempercayakan Gestatlt
             Systech.

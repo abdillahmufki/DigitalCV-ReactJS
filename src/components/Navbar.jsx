@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import logo from "../assets/images/logo/navbarSystech.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import DarkModeToggle from "./DarkModeToogle";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -55,6 +56,9 @@ const Navbar = () => {
             <li>
               <Link to="/aboutus">About Us</Link>
             </li>
+            <li>
+              <DarkModeToggle />
+            </li>
           </ul>
         </div>
         <Link to="/" className="ml-5">
@@ -62,7 +66,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden navbar-center lg:flex">
-        <ul className="px-1 menu menu-horizontal">
+        <ul className="px-1 menu menu-horizontal text-slate-400">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -71,6 +75,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/aboutus">About Us</Link>
+          </li>
+          <li>
+            <DarkModeToggle />
           </li>
         </ul>
       </div>

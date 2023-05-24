@@ -24,19 +24,19 @@ const Hero = () => {
         <Col lg={12}>
           <div className="my-2">
             <p
-              className="text-center text-lg text-blue-500 font-semibold"
+              className="text-center text-lg text-blue-500 font-semibold dark:text-white"
               data-aos="fade-down"
             >
               Selamat Datang Di Gestalt Systech
             </p>
           </div>
-          <div className="my-5" data-aos="fade-right">
-            <h2 className="text-4xl font-semibold text-center">
+          <div className="my-5" data-aos="fade-right ">
+            <h2 className="text-4xl font-semibold text-center dark:text-white">
               Rampingkan operasional bisnis Anda dengan Platform yang
               terintegrasi untuk produktivitas tanpa batas!
             </h2>
           </div>
-          <p className="py-6 text-slate-600 text-center">
+          <p className="py-6 text-slate-600 text-center dark:text-white">
             Gestalt Systech, solusi teknologi modern untuk mengoptimalkan
             kinerja bisnis Anda. Kami telah merancang sistem dengan cermat agar
             sesuai dengan kebutuhan perusahaan Anda. Dapatkan keuntungan dari
@@ -52,7 +52,7 @@ const Hero = () => {
           <img
             src={img}
             width={450}
-            className="lg:ml-80 my-8 pointer-events-none select-none"
+            className="lg:ml-80 my-8 pointer-events-none select-none rounded-md"
             draggable="false"
             alt="hero img"
             data-aos="fade-right"

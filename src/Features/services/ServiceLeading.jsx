@@ -90,6 +90,7 @@ export default function ServiceLeading() {
           <Container fluid>
             <Swiper
               slidesPerView={4}
+              centeredSlides={true}
               spaceBetween={30}
               breakpoints={{
                 // For small screens
@@ -117,7 +118,6 @@ export default function ServiceLeading() {
                   centeredSlidesBounds: true,
                 },
               }}
-              centeredSlides={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -127,7 +127,7 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="max-[428px]:ml-5"
+              className="max-[428px]:ml-5 max-[720px]:ml-[70px]"
             >
               {listItem.map((item, index) => {
                 return (

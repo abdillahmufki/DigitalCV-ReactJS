@@ -56,7 +56,7 @@ const SocialLinks = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer p-10 py-20 bg-slate-100 border-t-2 text-dark ">
+    <footer className="footer p-10 py-20 bg-slate-100 dark:bg-slate-600 border-t-2 text-dark dark:text-white">
       <div>
         <Link to="/">
           <img src={logo} width={350} height={100} alt="logo" />
@@ -74,7 +74,7 @@ const Footer = () => (
         <span className="footer-title">Social</span>
         <SocialLinks />
       </div>
-      <div>
+      <div className="dark:text-white">
         <span className="footer-title">CONTACT</span>
         <a href="mailto:support@gestaltsys.tech" className="link link-hover">
           support@gestaltsys.tech
@@ -88,9 +88,11 @@ const Footer = () => (
         </a>
       </div>
     </footer>
-    <div className="footer footer-center p-4 bg-base-300 text-base-content">
+    <div className="footer footer-center p-4 bg-base-300 dark:bg-slate-800 text-base-content">
       <div>
-        <p>Copyright © 2023 - All right reserved by PT. Gestalt Systech</p>
+        <p className="dark:text-white">
+          Copyright © 2023 - All right reserved by PT. Gestalt Systech
+        </p>
       </div>
     </div>
   </>
