@@ -87,10 +87,10 @@ const features = [
 
 const AllFeature = () => {
   return (
-    <Container fluid>
+    <Container>
       <Row className="gap-y-5 lg:px-10">
         {features.map((feature) => (
-          <Col key={feature.id} lg={6} sm={12}>
+          <Col key={feature.id} lg={4} sm={12}>
             <Link to={feature.link}>
               <CardContentTab
                 imgLogo={feature.imgLogo}

@@ -16,10 +16,10 @@ const ServiceFeatureRight = (props) => {
       <Row align="center" justify="center" direction="row">
         <Col lg={6} md={12} sm={12}>
           <div className="my-5">
-            <h3 className="text-2xl">{props.title}</h3>
+            <h3 className="text-2xl dark:text-white">{props.title}</h3>
           </div>
           <div>
-            <p>{props.description}</p>
+            <p className="dark:text-white">{props.description}</p>
           </div>
         </Col>
         <Col lg={6} md={12} sm={12}>

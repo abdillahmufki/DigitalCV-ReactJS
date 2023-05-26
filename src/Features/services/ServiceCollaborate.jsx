@@ -36,8 +36,8 @@ const ServiceCollaborate = () => {
   }, []);
   return (
     <Container fluid className="my-52">
-      <div className="mb-20" data-aos="fade-down">
-        <h2 className="text-4xl text-center">Cara bekerja dengan kami</h2>
+      <div className="mb-20 dark:text-white" data-aos="fade-down">
+        <h2 className="text-4xl text-center ">Cara bekerja dengan kami</h2>
         <h3 className="text-xl text-center">
           Kami membangun, menguji, meluncurkan, dan meningkatkan aplikasi web
           dan mobile yang kompleks
@@ -53,7 +53,7 @@ const ServiceCollaborate = () => {
                 </div>
                 <div className="py-5">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="">{item.description}</p>
+                  <p>{item.description}</p>
                 </div>
               </div>
             </Col>

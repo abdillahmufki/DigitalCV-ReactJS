@@ -75,7 +75,7 @@ export default function ServiceLeading() {
     <>
       <div className="mb-40 mt-30 overflow-hidden">
         <div data-aos="fade-right">
-          <h2 className="p-5 text-3xl font-normal text-center">
+          <h2 className="p-5 text-3xl font-normal text-center dark:text-white">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
             produktivitas, dan mengoptimalkan biaya.
@@ -83,13 +83,14 @@ export default function ServiceLeading() {
         </div>
         <div>
           <div className="my-10" data-aos="fade-left">
-            <h3 className="text-2xl font-semibold text-center">
+            <h3 className="text-2xl font-semibold text-center dark:text-white">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
             </h3>
           </div>
           <Container fluid>
             <Swiper
               slidesPerView={4}
+              centeredSlides={true}
               spaceBetween={30}
               breakpoints={{
                 // For small screens
@@ -117,7 +118,6 @@ export default function ServiceLeading() {
                   centeredSlidesBounds: true,
                 },
               }}
-              centeredSlides={true}
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
@@ -127,7 +127,7 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="max-[428px]:ml-5"
+              className="max-[428px]:ml-5 max-[720px]:ml-[70px]"
             >
               {listItem.map((item, index) => {
                 return (

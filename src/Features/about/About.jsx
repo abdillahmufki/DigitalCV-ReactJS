@@ -48,12 +48,15 @@ const About = () => {
       <div className="sm:pt-24 ">
         <div className="text-center sm:px-10 px-5">
           <h2
-            className="text-4xl sm:text-2xl md:text-3xl py-5 font-semibold"
+            className="text-4xl sm:text-2xl md:text-3xl py-5 font-semibold dark:text-white"
             data-aos="fade-down"
           >
             Meningkatkan performa bisnis melalui integrasi
           </h2>
-          <p className="text-[#7D7784] text-lg" data-aos="fade-right">
+          <p
+            className="text-[#7D7784] text-lg dark:text-white"
+            data-aos="fade-right"
+          >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's <br /> standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
@@ -85,9 +88,9 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="md:px-8 sm:px-0" data-aos="fade-left">
-          <div className="text-dark md:mt-16">
-            <div className="text-center">
+        <div className="md:px-8 sm:px-0 " data-aos="fade-left">
+          <div className="text-dark md:mt-16 ">
+            <div className="text-center ">
               {listItem.map((item, index) => (
                 <Collapse
                   key={index}

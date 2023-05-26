@@ -1,29 +1,33 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo/navbarSystech.png";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import DarkModeToggle from "./DarkModeToggle";
+import "../App.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.pageYOffset > 50);
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const className = `bg-transparent py-2 z-50 ${
+  const navbarClassName = `navbar sticky w-full top-0 ${
     isScrolled
-      ? "bg-white z-50 shadow py-2 transition ease-in-out delay-50 duration-300"
+      ? "bg-white dark:bg-slate-800 shadow py-2 transition ease-in-out delay-50 duration-300"
       : ""
   }`;
 
+  const dropdownContentClassName =
+    "p-2 mt-3 text-white bg-gradient-to-r from-blue-900 to-blue-400 shadow menu menu-compact dropdown-content rounded-box w-52";
+
   return (
-    <nav className={`navbar sticky w-full top-0 ${className} px-10 py-2 pt-3`}>
+    <nav className={`${navbarClassName}  lg:px-10 py-2 pt-3 z-50`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +36,7 @@ const Navbar = () => {
               className="w-5 h-5"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="#94A3B8" // Change the color here
             >
               <path
                 strokeLinecap="round"
@@ -42,10 +46,7 @@ const Navbar = () => {
               />
             </svg>
           </label>
-          <ul
-            tabIndex={0}
-            className="p-2 mt-3 text-white bg-blue-800 shadow menu menu-compact dropdown-content rounded-box w-52"
-          >
+          <ul tabIndex={0} className={dropdownContentClassName}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -55,6 +56,15 @@ const Navbar = () => {
             <li>
               <Link to="/aboutus">About Us</Link>
             </li>
+            <li>
+              <Link to="/aboutus">About Us</Link>
+            </li>
+            <li>
+              <Link to="https://digitalcv.id/id_new">Career</Link>
+            </li>
+            <li>
+              <DarkModeToggle />
+            </li>
           </ul>
         </div>
         <Link to="/" className="ml-5">
@@ -62,17 +72,38 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden navbar-center lg:flex">
-        <ul className="px-1 menu menu-horizontal">
+        <ul className="px-1 menu menu-horizontal text-slate-400">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/services">Services</Link>
           </li>
-          <li>
-            <Link to="/aboutus">About Us</Link>
+          <li tabIndex={0}>
+            <a>
+              Company
+              <svg
+                className="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24">
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </a>
+            <ul className="px-5 py-3 bg-gradient-to-r from-blue-900 to-blue-400 text-white mt-1">
+              <li>
+                <Link to="/aboutus">About Us</Link>
+              </li>
+              <li>
+                <Link to="https://digitalcv.id/id_new">Career</Link>
+              </li>
+            </ul>
           </li>
         </ul>
+      </div>
+      <div className="pt-3 text-slate-400">
+        <DarkModeToggle />
       </div>
       <div className="navbar-end">
         <Link to="/contact">

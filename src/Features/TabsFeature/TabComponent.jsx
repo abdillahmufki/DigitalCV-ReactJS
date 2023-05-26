@@ -93,7 +93,7 @@ const TabComponents = () => {
     <>
       <div className="p-5">
         <div className="my-10">
-          <h1 className="text-4xl font-semibold text-center">
+          <h1 className="text-4xl font-semibold text-center dark:text-white">
             Jawaban untuk segala kebutuhan bisnis Anda
           </h1>
         </div>
@@ -102,9 +102,8 @@ const TabComponents = () => {
             {/* Render dropdown menu on screens with max width of 768px (mobile) */}
             <select
               value={activeTab}
-              className="select select-bordered max-w-xs block appearance-none w-full bg-white border border-gray-300 px-4 py-2 pr-8 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              onChange={(e) => handleTabClick(parseInt(e.target.value))}
-            >
+              className="select select-bordered max-w-xs block text appearance-none w-full bg-white border border-gray-300 px-4 py-2 pr-8 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm "
+              onChange={(e) => handleTabClick(parseInt(e.target.value))}>
               <option value={1}>Semua</option>
               <option value={2}>DigitalCV</option>
               <option value={3}>Pinmyloc</option>
@@ -121,18 +120,17 @@ const TabComponents = () => {
               {tabs.map(({ index, label }) => (
                 <a
                   key={index}
-                  className={`tab tab-lg tab-lifted ${
+                  className={`tab tab-lg tab-lifted  text-slate-600 font-semibold  ${
                     activeTab === index ? "tab-active" : ""
                   }`}
-                  onClick={() => handleTabClick(index)}
-                >
+                  onClick={() => handleTabClick(index)}>
                   {label}
                 </a>
               ))}
             </Container>
           </Responsive>
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 pt-10 pb-24">
           {tabsContent.map(({ index, component }) => {
             return activeTab === index && component;
           })}

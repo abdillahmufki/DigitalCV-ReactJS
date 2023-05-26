@@ -40,7 +40,7 @@ const AboutCard = () => {
     });
   }, []);
   return (
-    <Container className="container_hero lg:mt-[5rem] md:mt-[3rem] sm:mt-[5rem]">
+    <Container className="container_hero lg:mt-[5rem] md:mt-[3rem] sm:mt-[2rem]">
       <Row
         className="hero-content leading-loose flex justify-center"
         data-aos="fade-down-right"
@@ -53,7 +53,7 @@ const AboutCard = () => {
           </div>
         </Col>
         <Col lg={12}>
-          <Row className="gap-y-5 flex justify-center">
+          <Row className="gap-y-2 flex justify-center">
             {listItems.map((item) => (
               <Col key={item.id}>
                 <Card
