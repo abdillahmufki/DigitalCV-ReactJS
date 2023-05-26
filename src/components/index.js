@@ -8,7 +8,7 @@ import ItemWrap from "./ItemWrap";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import WhatsappButton from "./WhatsappButton";
-import DarkModeToggle from "./DarkModeToogle";
+import DarkModeToggle from "./DarkModeToggle";
 
 export {
   AboutWrap,

@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="card card-compact w-80 bg-[#fff] shadow-xl my-10">
+    <div className="card card-compact w-80 bg-[#fff] dark:bg-[#f5f5f5]  shadow-xl my-10">
       <figure>
         <img
           className="w-full h-48 object-cover transform hover:scale-110 transition duration-300"

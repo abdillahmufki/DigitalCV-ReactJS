@@ -13,11 +13,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="mt-[150px]">
+    <div className="my-16">
       <Container>
         <Row>
           <Col lg={12}>
-            <div>
+            <div className="dark:text-white">
               <h2 className="text-3xl">
                 Kami dapat membantu anda mewujudkan ide anda menjadi kenyataan,
                 ambil project yang sudah ada, atau perpanjang pengembangan tim
@@ -36,7 +36,7 @@ const Contact = () => {
             <hr className="my-10" />
 
             <div>
-              <div>
+              <div className="dark:text-white">
                 <h2 className="text-3xl">Ceritakan tentang dirimu</h2>
                 <br />
                 <p className="text-slate-500">
@@ -44,11 +44,11 @@ const Contact = () => {
                   kami, termasuk penggunaan Cookie kami.
                 </p>
               </div>
-              <Row className="flex justify-between m-5">
-                <Col lg={6}>
+              <div className="flex justify-start m-5 gap-x-5">
+                <div>
                   <div className="form-control w-full max-w-xs">
                     <label className="label">
-                      <span className="label-text font-semibold">
+                      <span className="label-text font-semibold dark:text-white">
                         NAMA LENGKAP
                       </span>
                     </label>
@@ -59,11 +59,11 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </div>
-                </Col>
-                <Col lg={6}>
+                </div>
+                <div>
                   <div className="form-control">
                     <label className="label">
-                      <span className="label-text font-semibold">
+                      <span className="label-text font-semibold dark:text-white">
                         ALAMAT EMAIL
                       </span>
                     </label>
@@ -73,14 +73,14 @@ const Contact = () => {
                       className="input input-bordered w-full max-w-xs"
                     />
                   </div>
-                </Col>
-              </Row>
+                </div>
+              </div>
             </div>
 
             <hr className="my-10" />
 
             <div>
-              <div>
+              <div className="dark:text-white">
                 <h2 className="text-3xl">Bagaimana kami bisa membantu Anda?</h2>
                 <br />
                 <p className="text-slate-500">
@@ -92,14 +92,13 @@ const Contact = () => {
                 <Col lg={12}>
                   <div>
                     <label className="label">
-                      <span className="label-text font-semibold">
+                      <span className="label-text font-semibold dark:text-white">
                         DESKRIPSI PROJECT
                       </span>
                     </label>
                     <textarea
                       placeholder="Deskripsikan project anda"
-                      className="textarea textarea-bordered textarea-lg w-full max-w-xs"
-                    ></textarea>
+                      className="textarea textarea-bordered textarea-lg w-full max-w-xs"></textarea>
                   </div>
 
                   <div className="flex items-center mb-4">
@@ -111,8 +110,7 @@ const Contact = () => {
                     />
                     <label
                       htmlFor="setuju-checkbox"
-                      className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
-                    >
+                      className="ml-2 text-md font-medium text-gray-900 dark:text-gray-300">
                       Buat saya selalu mendapatkan informasi terbaru tentang
                       tren pengembangan web terbaru dan penawaran khusus TMS
                     </label>

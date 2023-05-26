@@ -18,6 +18,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.navbar ul li:hover {
+  border-bottom: 2px solid #ff9800;
+}
+
 @media screen and (max-width: 400px) {
   .hero-content h1 {
     font-size: 30px;
@@ -80,7 +84,6 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: flex;

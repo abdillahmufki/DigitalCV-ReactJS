@@ -12,11 +12,11 @@ const listItems = [
 ];
 const CalcNote = () => {
   return (
-    <div>
-      <div className="flex items-center">
+    <>
+      <div className="flex items-center lg:px-10">
         <ItemWrap>
           <Container>
-            <Row>
+            <Row className="gap-y-5 lg:px-10">
               <Col lg={6}>
                 {" "}
                 <div>
@@ -33,8 +33,7 @@ const CalcNote = () => {
                     {listItems.map((item, index) => (
                       <li
                         key={index}
-                        className="flex justify-start gap-x-5 my-2 text-[#626b79]"
-                      >
+                        className="flex justify-start gap-x-5 my-2 text-[#626b79]">
                         <CheckCircleIcon className="h-6 w-6 text-green-500" />
                         {item}
                       </li>
@@ -56,7 +55,7 @@ const CalcNote = () => {
           </Container>
         </ItemWrap>
       </div>
-    </div>
+    </>
   );
 };
 

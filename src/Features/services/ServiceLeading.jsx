@@ -75,7 +75,7 @@ export default function ServiceLeading() {
     <>
       <div className="mb-40 mt-30 overflow-hidden">
         <div data-aos="fade-right">
-          <h2 className="p-5 text-3xl font-normal text-center">
+          <h2 className="p-5 text-3xl font-normal text-center dark:text-white">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
             produktivitas, dan mengoptimalkan biaya.
@@ -83,7 +83,7 @@ export default function ServiceLeading() {
         </div>
         <div>
           <div className="my-10" data-aos="fade-left">
-            <h3 className="text-2xl font-semibold text-center">
+            <h3 className="text-2xl font-semibold text-center dark:text-white">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
             </h3>
           </div>

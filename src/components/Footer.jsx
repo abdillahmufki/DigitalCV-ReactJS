@@ -56,7 +56,7 @@ const SocialLinks = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer p-10 py-20 bg-slate-100 dark:bg-slate-600 border-t-2 text-dark dark:text-white">
+    <footer className="footer p-10 py-20 bg-slate-100 dark:bg-slate-600  text-dark dark:text-white">
       <div>
         <Link to="/">
           <img src={logo} width={350} height={100} alt="logo" />

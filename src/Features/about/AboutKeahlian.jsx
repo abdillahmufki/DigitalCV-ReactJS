@@ -33,7 +33,7 @@ const AboutKeahlian = () => {
   }, []);
   return (
     <>
-      <Container>
+      <Container className="overflow-hidden">
         <Row>
           <Col lg={12}>
             <div className="my-2">
@@ -45,25 +45,33 @@ const AboutKeahlian = () => {
           <Col lg={12}>
             <img
               src={aboutKeahlian}
-              className="my-8 pointer-events-none select-none w-auto"
+              className="my-8 pointer-events-none select-none w-auto rounded-xl"
               draggable="false"
               alt="hero img"
               data-aos="fade-up"
             />
-            <div className="wrap__keahlian lg:relative lg:bottom-36 lg:left-24">
+            <div className="wrap__keahlian lg:relative lg:bottom-36 lg:ml-24">
               <AboutWrap>
                 {listItem.map((item) => (
-                  <div key={item.id} className="my-10" data-aos="fade-left">
+                  <div
+                    key={item.id}
+                    className="my-10 dark:text-white"
+                    data-aos="fade-left"
+                  >
                     <h2 className="text-3xl">{item.title}</h2>
-                    <p className="text-lg text-slate-500">{item.desc}</p>
+                    <p className="text-lg text-slate-500 dark:text-white">
+                      {item.desc}
+                    </p>
                     <br />
-                    <p className="text-justify text-lg text-slate-500">
+                    <p className="text-justify text-lg text-slate-500 dark:text-white">
                       {item.secDesc}
                     </p>
                   </div>
                 ))}
                 <div>
-                  <a className="link text-2xl text-blue-500 my-5">Learn More</a>
+                  <a className="link text-2xl text-blue-500 my-5">
+                    Selengkapnya
+                  </a>
                 </div>
               </AboutWrap>
             </div>
