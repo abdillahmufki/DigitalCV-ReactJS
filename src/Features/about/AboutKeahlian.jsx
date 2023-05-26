@@ -5,6 +5,7 @@ import AboutWrap from "../../components/AboutWrap";
 import "../../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const listItem = [
   {
@@ -56,8 +57,7 @@ const AboutKeahlian = () => {
                   <div
                     key={item.id}
                     className="my-10 dark:text-white"
-                    data-aos="fade-left"
-                  >
+                    data-aos="fade-left">
                     <h2 className="text-3xl">{item.title}</h2>
                     <p className="text-lg text-slate-500 dark:text-white">
                       {item.desc}
@@ -69,9 +69,11 @@ const AboutKeahlian = () => {
                   </div>
                 ))}
                 <div>
-                  <a className="link text-2xl text-blue-500 my-5">
+                  <Link
+                    to="/contact"
+                    className="link text-2xl text-blue-700 my-5">
                     Selengkapnya
-                  </a>
+                  </Link>
                 </div>
               </AboutWrap>
             </div>
