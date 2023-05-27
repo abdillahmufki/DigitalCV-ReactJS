@@ -8,7 +8,7 @@ import AboutCard from "../Features/about/AboutCard";
 import AboutKeahlian from "../Features/about/AboutKeahlian";
 import AboutTech from "../Features/about/AboutTech";
 import AboutContact from "../Features/about/AboutContact";
-import aboutus from "../assets/images/content/aboutus.svg";
+import aboutus from "../assets/images/content/aboutUs.svg";
 
 const AboutUs = () => {
   useEffect(() => {
