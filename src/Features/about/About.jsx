@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Container } from "react-grid-system";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import imgAbout from "../../assets/images/content/about.svg";
 import Collapse from "../../components/Collapse";
@@ -49,14 +50,12 @@ const About = () => {
         <div className="text-center sm:px-10 px-5">
           <h2
             className="text-4xl sm:text-2xl md:text-3xl py-5 font-semibold dark:text-white"
-            data-aos="fade-down"
-          >
+            data-aos="fade-down">
             Meningkatkan performa bisnis melalui integrasi
           </h2>
           <p
             className="text-[#7D7784] text-lg dark:text-white"
-            data-aos="fade-right"
-          >
+            data-aos="fade-right">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's <br /> standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
@@ -65,8 +64,7 @@ const About = () => {
           <div className="my-3">
             <a
               className="link link-hover flex justify-center gap-x-2 text-blue-800"
-              data-aos="fade-down"
-            >
+              data-aos="fade-down">
               Pelajari lebih lanjut
               <span className="hover:animate-bounce">
                 <ArrowLongRightIcon className="h-6 w-6 text-blue-800" />
@@ -75,7 +73,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="container grid grid-cols-1 sm:grid-cols-2 sm:gap-10 gap-y-10 px-10 overflow-hidden mt-10">
+      <Container className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 gap-y-10 px-10 overflow-hidden mt-10">
         <div className="text-dark">
           <div className="text-center">
             <img
@@ -101,7 +99,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

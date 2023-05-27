@@ -51,12 +51,12 @@ const AboutKeahlian = () => {
               alt="hero img"
               data-aos="fade-up"
             />
-            <div className="wrap__keahlian lg:relative lg:bottom-36 lg:ml-24">
+            <div className="wrap__keahlian lg:relative lg:bottom-36 lg:ml-24 ">
               <AboutWrap>
                 {listItem.map((item) => (
                   <div
                     key={item.id}
-                    className="my-10 dark:text-white"
+                    className="dark:text-white my-5"
                     data-aos="fade-left">
                     <h2 className="text-3xl">{item.title}</h2>
                     <p className="text-lg text-slate-500 dark:text-white">

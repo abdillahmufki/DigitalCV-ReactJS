@@ -36,7 +36,7 @@ const AboutUs = () => {
           text={data.description}
           img={data.img}
           button={data.button}
-          className="d-none"
+          className="d-none text-center"
         />
       </div>
 

@@ -31,7 +31,7 @@ const CompanyLinks = () => (
     <Link to="/aboutus" className="link link-hover">
       About us
     </Link>
-    <Link to="/" className="link link-hover">
+    <Link to="https://digitalcv.id/id_new" className="link link-hover">
       Careers
     </Link>
     <Link to="/" className="link link-hover">
@@ -56,7 +56,7 @@ const SocialLinks = () => (
 
 const Footer = () => (
   <>
-    <footer className="footer p-10 py-20 bg-slate-100 dark:bg-slate-600  text-dark dark:text-white">
+    <footer className="footer p-10 py-20 bg-slate-100 dark:bg-slate-800  text-dark dark:text-white">
       <div>
         <Link to="/">
           <img src={logo} width={350} height={100} alt="logo" />
@@ -88,7 +88,7 @@ const Footer = () => (
         </a>
       </div>
     </footer>
-    <div className="footer footer-center p-4 bg-base-300 dark:bg-slate-800 text-base-content">
+    <div className="footer footer-center p-4 bg-base-300 dark:bg-[#111827] text-base-content">
       <div>
         <p className="dark:text-white">
           Copyright © 2023 - All right reserved by PT. Gestalt Systech
