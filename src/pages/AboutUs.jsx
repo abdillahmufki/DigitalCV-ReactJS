@@ -8,7 +8,7 @@ import AboutCard from "../Features/about/AboutCard";
 import AboutKeahlian from "../Features/about/AboutKeahlian";
 import AboutTech from "../Features/about/AboutTech";
 import AboutContact from "../Features/about/AboutContact";
-import img from "../assets/images/content/aboutus.svg";
+import aboutus from "../assets/images/content/aboutUs.svg";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const AboutUs = () => {
     title: "ABOUT",
     subHeading:
       "Gestalt Systech adalah pusat pengembangan utama untuk perencanaan, pembangunan, dukungan dan peningkatan aplikasi web terkemuka.",
-    img: img,
+    img: aboutus,
     button: "Contact",
   };
   return (
