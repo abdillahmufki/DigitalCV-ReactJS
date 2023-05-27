@@ -27,7 +27,7 @@ const Navbar = () => {
     "p-2 mt-3 text-white bg-gradient-to-r from-blue-900 to-blue-400 shadow menu menu-compact dropdown-content rounded-box w-52";
 
   return (
-    <nav className={`${navbarClassName}  lg:px-10 py-2 pt-3 z-50`}>
+    <nav className={`${navbarClassName} px-5 lg:px-10 py-2 pt-3 z-50`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

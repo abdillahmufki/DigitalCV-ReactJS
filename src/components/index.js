@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import WhatsappButton from "./WhatsappButton";
 import DarkModeToggle from "./DarkModeToggle";
+import LoadingSpinner from "./LoadingSpinner";
 
 export {
   AboutWrap,
@@ -22,4 +23,5 @@ export {
   SearchBar,
   WhatsappButton,
   DarkModeToggle,
+  LoadingSpinner,
 };
