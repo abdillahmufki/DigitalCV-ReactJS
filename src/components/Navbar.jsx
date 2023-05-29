@@ -1,21 +1,24 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo/navbarSystech.png";
 import Button from "./Button";
 import DarkModeToggle from "./DarkModeToggle";
 import "../App.css";
+import logo from "../assets/images/logo/navbarSystech.png";
 
-const Navbar = () => {
+const Navbar = React.memo(() => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 50);
+  }, []);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   const navbarClassName = `navbar sticky w-full top-0 ${
     isScrolled
@@ -48,19 +51,32 @@ const Navbar = () => {
           </label>
           <ul tabIndex={0} className={dropdown}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" key="home-link">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/services">Services</Link>
+              <Link to="/services" key="services-link">
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus" key="aboutus-link">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/aboutus" key="aboutus-link-2">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="https://digitalcv.id/id_new">Career</Link>
+              <Link to="https://digitalcv.id/id_new" key="career-link">
+                Career
+              </Link>
+            </li>
+            <li>
+              <DarkModeToggle />
             </li>
           </ul>
         </div>
@@ -71,10 +87,14 @@ const Navbar = () => {
       <div className="hidden navbar-center lg:flex">
         <ul className="px-1 menu menu-horizontal text-slate-400">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" key="home-link">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/services" key="services-link">
+              Services
+            </Link>
           </li>
           <li tabIndex={0}>
             <a>
@@ -90,10 +110,14 @@ const Navbar = () => {
             </a>
             <ul className="px-5 py-3 bg-gradient-to-r from-blue-900 to-blue-400 text-white mt-1">
               <li>
-                <Link to="/aboutus">About Us</Link>
+                <Link to="/aboutus" key="aboutus-link">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link to="https://digitalcv.id/id_new">Career</Link>
+                <Link to="https://digitalcv.id/id_new" key="career-link">
+                  Career
+                </Link>
               </li>
             </ul>
           </li>
@@ -109,6 +133,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Hero from "../components/Hero";
-import ServiceLeading from "../Features/services/ServiceLeading";
-import ServiceLifecycle from "../Features/services/ServiceLifecycle";
-import ServiceCollaborate from "../Features/services/ServiceCollaborate";
-import ServiceBenefit from "../Features/services/ServiceBenefit";
-import AboutContact from "../Features/about/AboutContact";
+
+const ServiceLeading = lazy(() =>
+  import("../Features/services/ServiceLeading")
+);
+const ServiceLifecycle = lazy(() =>
+  import("../Features/services/ServiceLifecycle")
+);
+const ServiceCollaborate = lazy(() =>
+  import("../Features/services/ServiceCollaborate")
+);
+const ServiceBenefit = lazy(() =>
+  import("../Features/services/ServiceBenefit")
+);
+const AboutContact = lazy(() => import("../Features/about/AboutContact"));
 import img from "../assets/images/content/about.svg";
 
 const Services = () => {
@@ -16,6 +25,7 @@ const Services = () => {
     img: img,
     button: "Contact",
   };
+
   return (
     <div className="my-10">
       <div>
@@ -28,19 +38,29 @@ const Services = () => {
         />
       </div>
       <div className="mt-10">
-        <ServiceLeading />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServiceLeading />
+        </Suspense>
       </div>
       <div>
-        <ServiceLifecycle />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServiceLifecycle />
+        </Suspense>
       </div>
       <div>
-        <ServiceCollaborate />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServiceCollaborate />
+        </Suspense>
       </div>
       <div>
-        <ServiceBenefit />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ServiceBenefit />
+        </Suspense>
       </div>
       <div>
-        <AboutContact />
+        <Suspense fallback={<div>Loading...</div>}>
+          <AboutContact />
+        </Suspense>
       </div>
     </div>
   );

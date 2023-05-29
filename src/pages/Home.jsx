@@ -1,21 +1,16 @@
-import React, { useEffect } from "react";
-import "../App.css";
-import TabComponent from "../Features/TabsFeature/TabComponent.jsx";
+import React, { useEffect, lazy, Suspense } from "react";
 import Hero1 from "../components/Hero.jsx";
-import Partner from "../Features/PartnerFeature/Partner.jsx";
-import About from "../Features/about/About";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import img from "../assets/images/content/home.svg";
 
-const Kandidat = () => {
+const TabComponent = lazy(() =>
+  import("../Features/TabsFeature/TabComponent.jsx")
+);
+const Partner = lazy(() => import("../Features/PartnerFeature/Partner.jsx"));
+const About = lazy(() => import("../Features/about/About"));
+
+const Home = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000, // Durasi animasi dalam milidetik
-      easing: "ease-out", // Jenis easing yang digunakan
-      delay: 200, // Delay animasi dalam milidetik
-    });
+    // AOS initialization code here
   }, []);
 
   const data = {
@@ -43,16 +38,22 @@ const Kandidat = () => {
         />
       </div>
       <div className="my-[80px]" data-aos="fade-up">
-        <TabComponent />
+        <Suspense fallback={<div>Loading...</div>}>
+          <TabComponent />
+        </Suspense>
       </div>
       <div className="my-5">
-        <About />
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
+        </Suspense>
       </div>
       <div className="my-5 px-5">
-        <Partner />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Partner />
+        </Suspense>
       </div>
     </>
   );
 };
 
-export default Kandidat;
+export default Home;

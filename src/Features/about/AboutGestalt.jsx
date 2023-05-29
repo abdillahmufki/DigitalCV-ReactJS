@@ -22,35 +22,37 @@ const Stepper = () => {
           backgroundImage: `url("${bgImg}")`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-        }}
-      >
+        }}>
         <div>
           <h2
-            className="header__about-gestalt text-center text-3xl font-semibold text-blue-500 my-10"
-            data-aos="fade-down"
-          >
+            className="header__about-gestalt text-center text-3xl max-[480px]:text-xl font-semibold text-blue-500 my-10"
+            data-aos="fade-down">
             About Gestalt Systech
           </h2>
         </div>
         <Container fluid>
           <div
             className="flex flex-col w-full border-opacity-50 px-10"
-            data-aos="fade-right"
-          >
+            data-aos="fade-right">
             <div className="grid card bg-base-300 rounded-box place-items-center p-5">
-              Gestalt Systech berasal dari departmen IT Gestalt Center yang
-              berdiri 2007, yang merupakan perusahaan human capital consultant.
+              <p className="text-base">
+                Gestalt Systech berasal dari departmen IT Gestalt Center yang
+                berdiri 2007, yang merupakan perusahaan human capital
+                consultant.
+              </p>
             </div>
             <div className="divider">
               <ArrowLongDownIcon width={70} color="white" />
             </div>
             <div className="grid card bg-base-300 rounded-box place-items-center p-5">
-              Seiring dengan perkembangan perusahaan dan peningkatan kebutuhan
-              akan bidang IT dari semua klien yang dimiliki maka departemen IT
-              ini mulai dibangun dan dibentuk menjadi sebuah perusahaan yang
-              terpisah dari gestalt center dari sejak tahun 2018 dan dikukuhkan
-              menjadi sebuah perusahaan dengan nama PT.Gestalt Sistem Teknologi
-              pada 18 Juni 2019.
+              <p className="text-base">
+                Seiring dengan perkembangan perusahaan dan peningkatan kebutuhan
+                akan bidang IT dari semua klien yang dimiliki maka departemen IT
+                ini mulai dibangun dan dibentuk menjadi sebuah perusahaan yang
+                terpisah dari gestalt center dari sejak tahun 2018 dan
+                dikukuhkan menjadi sebuah perusahaan dengan nama PT.Gestalt
+                Sistem Teknologi pada 18 Juni 2019.
+              </p>
             </div>
           </div>
         </Container>
