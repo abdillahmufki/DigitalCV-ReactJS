@@ -61,11 +61,6 @@ const Navbar = React.memo(() => {
               </Link>
             </li>
             <li>
-              <Link to="/aboutus" key="aboutus-link">
-                About Us
-              </Link>
-            </li>
-            <li>
               <Link to="/aboutus" key="aboutus-link-2">
                 About Us
               </Link>
