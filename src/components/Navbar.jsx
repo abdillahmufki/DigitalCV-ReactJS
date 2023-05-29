@@ -23,7 +23,7 @@ const Navbar = () => {
       : ""
   }`;
 
-  const dropdownContentClassName =
+  const dropdown =
     "p-2 mt-3 text-white bg-gradient-to-r from-blue-900 to-blue-400 shadow menu menu-compact dropdown-content rounded-box w-52";
 
   return (
@@ -46,7 +46,7 @@ const Navbar = () => {
               />
             </svg>
           </label>
-          <ul tabIndex={0} className={dropdownContentClassName}>
+          <ul tabIndex={0} className={dropdown}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -61,9 +61,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="https://digitalcv.id/id_new">Career</Link>
-            </li>
-            <li>
-              <DarkModeToggle />
             </li>
           </ul>
         </div>
