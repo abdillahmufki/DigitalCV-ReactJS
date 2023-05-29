@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../App.css";
+import { memo } from "react";
 import Hero from "../components/Hero.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -13,9 +13,9 @@ import aboutus from "../assets/images/content/aboutUs.svg";
 const AboutUs = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi dalam milidetik
-      easing: "ease-out", // Jenis easing yang digunakan
-      delay: 200, // Delay animasi dalam milidetik
+      duration: 1000,
+      easing: "ease-out",
+      delay: 200,
     });
   }, []);
 
@@ -27,9 +27,10 @@ const AboutUs = () => {
     img: aboutus,
     button: "Contact",
   };
+
   return (
     <>
-      <div className="my-10" data-aos="fade-right">
+      <div className="lg:my-10" data-aos="fade-right">
         <Hero
           heading={data.title}
           subHeading={data.subHeading}
@@ -59,4 +60,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default memo(AboutUs);
