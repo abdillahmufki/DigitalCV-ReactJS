@@ -20,7 +20,7 @@ const CountList = () => {
               <Col lg={6}>
                 {" "}
                 <div>
-                  <h2 className="text-2xl font-semibold">
+                  <h2 className="text-2xl max-[480px]:text-xl text-black dark:text-slate-600 font-semibold">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry
                   </h2>
@@ -33,8 +33,7 @@ const CountList = () => {
                     {listItems.map((item, index) => (
                       <li
                         key={index}
-                        className="flex justify-start gap-x-5 my-2 text-[#626b79]"
-                      >
+                        className="flex justify-start gap-x-5 my-2 text-[#626b79]">
                         <CheckCircleIcon className="h-6 w-6 text-green-500" />
                         {item}
                       </li>

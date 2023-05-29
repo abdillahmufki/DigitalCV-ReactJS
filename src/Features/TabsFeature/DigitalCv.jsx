@@ -19,7 +19,7 @@ const DigitalCv = () => {
             <Col lg={6}>
               {" "}
               <div>
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-2xl max-[480px]:text-xl text-black dark:text-slate-600 font-semibold">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </h2>
