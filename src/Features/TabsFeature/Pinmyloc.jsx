@@ -23,7 +23,7 @@ const Pinmyloc = () => {
                 <div>
                   <h2 className="text-2xl font-semibold">
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.lg:
+                    typesetting industry.
                   </h2>
                   <p className="my-10 text-[#626b79]">
                     Lorem Ipsum has been the industry's standard dummy text ever
@@ -34,8 +34,7 @@ const Pinmyloc = () => {
                     {listItems.map((item, index) => (
                       <li
                         key={index}
-                        className="flex justify-start gap-x-5 my-2 text-[#626b79]"
-                      >
+                        className="flex justify-start gap-x-5 my-2 text-[#626b79]">
                         <CheckCircleIcon className="h-6 w-6 text-green-500" />
                         {item}
                       </li>

@@ -49,12 +49,12 @@ const About = () => {
       <div className="sm:pt-24 ">
         <div className="text-center sm:px-10 px-5">
           <h2
-            className="text-4xl sm:text-2xl md:text-3xl py-5 font-semibold dark:text-white"
+            className="text-4xl max-[480px]:text-2xl md:text-3xl text-black py-5 font-semibold dark:text-white"
             data-aos="fade-down">
             Meningkatkan performa bisnis melalui integrasi
           </h2>
           <p
-            className="text-[#7D7784] text-lg dark:text-white"
+            className="text-[#7D7784] text-base dark:text-white"
             data-aos="fade-right">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's <br /> standard dummy

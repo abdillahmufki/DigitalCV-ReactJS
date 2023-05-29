@@ -92,8 +92,8 @@ const TabComponents = () => {
   return (
     <>
       <div className="p-5">
-        <div className="my-10">
-          <h1 className="text-4xl font-semibold text-center dark:text-white">
+        <div className="my-10 max-[600px]:my-5">
+          <h1 className="text-4xl max-[600px]:text-2xl font-semibold text-center dark:text-white">
             Jawaban untuk segala kebutuhan bisnis Anda
           </h1>
         </div>
@@ -120,7 +120,7 @@ const TabComponents = () => {
               {tabs.map(({ index, label }) => (
                 <a
                   key={index}
-                  className={`tab tab-lg tab-lifted  text-slate-600 font-semibold  ${
+                  className={`tab tab-lg tab-lifted bg-white text-slate-600 font-semibold  ${
                     activeTab === index ? "tab-active" : ""
                   }`}
                   onClick={() => handleTabClick(index)}>

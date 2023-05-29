@@ -12,20 +12,18 @@ const Hero = (props) => {
             <div>
               <p
                 className="text-center text-lg text-blue-400 font-semibold dark:text-white"
-                data-aos="fade-down"
-              >
+                data-aos="fade-down">
                 {props.heading}
               </p>
             </div>
             <div className="my-5" data-aos="fade-right">
-              <h2 className="text-4xl font-semibold text-center dark:text-white">
+              <h2 className="text-4xl max-[480px]:text-2xl font-semibold text-center text-black dark:text-white">
                 {props.subHeading}
               </h2>
             </div>
             <p
               className="py-6 text-slate-600 text-center dark:text-white"
-              data-aos="fade-down"
-            >
+              data-aos="fade-down">
               {props.text}
             </p>
             <div className={props.className}>
