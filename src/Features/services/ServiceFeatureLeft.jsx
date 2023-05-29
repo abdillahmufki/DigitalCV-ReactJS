@@ -20,10 +20,14 @@ const ServiceFeatureLeft = (props) => {
         </Col>
         <Col lg={6} md={12} sm={12}>
           <div className="my-5">
-            <h3 className="text-2xl dark:text-white">{props.title}</h3>
+            <h3 className="text-2xl max-[480px]:text-lg text-black dark:text-white">
+              {props.title}
+            </h3>
           </div>
           <div>
-            <p className="dark:text-white">{props.description}</p>
+            <p className="text-base text-slate-600 dark:text-white">
+              {props.description}
+            </p>
           </div>
         </Col>
       </Row>

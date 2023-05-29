@@ -75,7 +75,7 @@ export default function ServiceLeading() {
     <>
       <div className="mb-40 mt-30 overflow-hidden">
         <div data-aos="fade-right">
-          <h2 className="p-5 text-3xl font-normal text-center dark:text-white">
+          <h2 className="p-5 text-3xl max-[480px]:text-xl text-black font-normal text-center dark:text-white">
             Layanan kami cocok untuk perusahaan teknologi dan pengembangan yang
             ingin meningkatkan kemampuan pengembangan, meningkatkan
             produktivitas, dan mengoptimalkan biaya.
@@ -83,7 +83,7 @@ export default function ServiceLeading() {
         </div>
         <div>
           <div className="my-10" data-aos="fade-left">
-            <h3 className="text-2xl font-semibold text-center dark:text-white">
+            <h3 className="text-2xl max-[480px]:text-lg text-black font-semibold text-center dark:text-white">
               KAMI MEMBANGUN SOLUSI TEKNOLOGI SEPERTI
             </h3>
           </div>
@@ -127,8 +127,7 @@ export default function ServiceLeading() {
                 clickable: true,
               }}
               modules={[Autoplay, Pagination]}
-              className="max-[428px]:ml-5 max-[720px]:ml-[70px]"
-            >
+              className="max-[428px]:ml-8 max-[720px]:ml-[70px]">
               {listItem.map((item, index) => {
                 return (
                   <SwiperSlide key={index}>

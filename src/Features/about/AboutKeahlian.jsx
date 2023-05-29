@@ -58,7 +58,7 @@ const AboutKeahlian = () => {
                     key={item.id}
                     className="dark:text-white my-5"
                     data-aos="fade-left">
-                    <h2 className="text-3xl">{item.title}</h2>
+                    <h2 className="text-3xl text-black">{item.title}</h2>
                     <p className="text-lg text-slate-500 dark:text-white">
                       {item.desc}
                     </p>
