@@ -32,10 +32,10 @@ const ServiceBenefit = () => {
           </Col>
           <Col lg={6} md={6} sm={12} data-aos="fade-left">
             <div className="bg-[#f5f5f5] p-10 rounded-xl">
-              <h3 className="text-xl  font-semibold">
+              <h3 className="text-xl font-semibold">
                 Kemitraan jangka panjang
               </h3>
-              <p className="">
+              <p>
                 Fokus pada pemberian nilai kepada pengguna akhir aplikasi, dan
                 bukan pada tugas individual yang berdetak
               </p>

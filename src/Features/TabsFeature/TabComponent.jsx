@@ -71,7 +71,7 @@ const TabComponents = () => {
               {tabs.map(({ index, label }) => (
                 <a
                   key={index}
-                  className={`tab tab-lg tab-lifted bg-white text-slate-600 font-semibold  ${
+                  className={`tab tab-lg tab-lifted bg-white dark:bg-slate-500 text-black dark:border-none font-semibold  ${
                     activeTab === index ? "tab-active" : ""
                   }`}
                   onClick={() => handleTabClick(index)}>
