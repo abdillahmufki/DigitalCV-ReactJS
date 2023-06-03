@@ -37,10 +37,10 @@ const ServiceCollaborate = () => {
   return (
     <Container fluid className="my-52">
       <div className="mb-20 dark:text-white" data-aos="fade-down">
-        <h2 className="text-4xl max-[480px]:text-xl text-black text-center ">
+        <h2 className="text-4xl max-[480px]:text-xl text-black text-center dark:text-white">
           Cara bekerja dengan kami
         </h2>
-        <h3 className="text-2xl max-[480px]:text-lg text-slate-600 text-center">
+        <h3 className="text-2xl max-[480px]:text-lg text-slate-600 text-center dark:text-white">
           Kami membangun, menguji, meluncurkan, dan meningkatkan aplikasi web
           dan mobile yang kompleks
         </h3>

@@ -19,11 +19,11 @@ const CalcSales = () => {
             <Col lg={6}>
               {" "}
               <div>
-                <h2 className="text-2xl max-[480px]:text-xl text-black dark:text-slate-600 font-semibold">
+                <h2 className="text-2xl max-[480px]:text-xl text-black dark:text-white font-semibold">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </h2>
-                <p className="my-10 text-[#626b79]">
+                <p className="my-10 text-[#626b79] dark:text-white">
                   Lorem Ipsum has been the industry's standard dummy text ever
                   since the 1500s, when an unknown printer took a galley of type
                   and scrambled it to make a type specimen book.
@@ -32,7 +32,7 @@ const CalcSales = () => {
                   {listItems.map((item, index) => (
                     <li
                       key={index}
-                      className="flex justify-start gap-x-5 my-2 text-[#626b79]">
+                      className="flex justify-start gap-x-5 my-2 text-[#626b79] dark:text-white">
                       <CheckCircleIcon className="h-6 w-6 text-green-500" />
                       {item}
                     </li>

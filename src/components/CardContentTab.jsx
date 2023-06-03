@@ -17,7 +17,7 @@ const CardContentTab = (props) => {
               width={250}
               alt={props.altContent}
             />
-            <h4 className="text-2xl max-[480px]:text-xxl text-black font-semibold text-center mt-3">
+            <h4 className="text-2xl max-[480px]:text-xxl text-black dark:text-white font-semibold text-center mt-3">
               {props.content}
             </h4>
           </div>
